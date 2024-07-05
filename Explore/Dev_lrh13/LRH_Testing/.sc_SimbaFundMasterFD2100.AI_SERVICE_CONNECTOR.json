@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "1prIRfPZyKUilhA4eDx6Cq",
+    "name" : "sc_SimbaFundMasterFD2100",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "clopz4KhPVEQrXh-gt-5081960-2024-03-07T17:45:53.042Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get SIMBA fund master data records",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-05T16:04:59.659Z",
+  "objectRefs" : [ ]
+}

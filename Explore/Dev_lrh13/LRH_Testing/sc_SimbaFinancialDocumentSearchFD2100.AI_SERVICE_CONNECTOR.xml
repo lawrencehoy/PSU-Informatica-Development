@@ -1,0 +1,763 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>yzBvlEQT53nQciS-gt-9544858-2024-03-21T12:56:12.392Z::svc.xml</types1:EntryId>
+      <types1:Name>sc_SimbaFinancialDocumentSearchFD2100-2</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Get financial document records from SIMBA</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>lrh13@psu.edu.SAML2</types1:CreatedBy>
+      <types1:CreationDate>2024-03-21T12:56:12Z</types1:CreationDate>
+      <types1:ModifiedBy>lrh13@psu.edu.SAML2</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-21T12:57:45Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="sc_SimbaFinancialDocumentSearchFD2100"
+                            label=""
+                            name="sc_SimbaFinancialDocumentSearchFD2100-2"
+                            uuid="ba14aa87-8ee2-4707-905e-daf4b7d14716">
+            <description>Get financial document records from SIMBA</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category="FETR0016863 - Journal Document Search API"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_ZC_FICO_ACCOUNTINGDOCS"
+                       maxRedirects="100"
+                       name="GET_ZC_FICO_ACCOUNTINGDOCS"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get financial document records from SIMBA ZC_FICO_ACCOUNTINGDOCS</description>
+                  <input>
+                     <parameter description="Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)"
+                                label="offset"
+                                name="offset"
+                                required="false"
+                                testWith=""
+                                type="int"/>
+                     <parameter description="Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)"
+                                label="limit"
+                                name="limit"
+                                required="false"
+                                testWith=""
+                                type="int"/>
+                     <parameter description="Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)"
+                                label="filter"
+                                name="filter"
+                                required="true"
+                                testWith="DocumentNumber%20eq%20%274200000164%27"
+                                type="string"/>
+                     <parameter description="Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)"
+                                label="inlinecount"
+                                name="inlinecount"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)"
+                                label="orderby"
+                                name="orderby"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)"
+                                label="select"
+                                name="select"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://services.dev.simba.psu.edu/sap/opu/odata/sap/ZC_FICO_ACCOUNTINGDOCS_CDS/ZC_FICO_ACCOUNTINGDOCS?spnego=disabled&amp;amp;%24top={ $offset }&amp;amp;%24skip={ $limit }&amp;amp;%24filter={ $filter }&amp;amp;%24inlinecount={ $inlinecount  }&amp;amp;%24orderby={ $orderby  }&amp;amp;%24select={ $select  }"
+                                        verb="GET">
+                        <authentication>
+                           <username>IICSIWAD</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="true">
+                           <keyStore mode="file">E:\s8-iwa-devsa1.ad.psu.edu_InCommon_CA\s8-iwa-devsa1.ad.psu.edu.jks</keyStore>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Retrieved entities"
+                            entireResponse="true"
+                            name="D"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">D</option>
+                           <option name="guid">D</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FETR0016863 - Journal Document Search API"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_ZC_FICO_ACCOUNTINGDOCSByKey"
+                       maxRedirects="100"
+                       name="GET_ZC_FICO_ACCOUNTINGDOCSByKey"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get financial document records from SIMBA ZC_FICO_ACCOUNTINGDOCS by key</description>
+                  <input>
+                     <parameter description="Fiscal Year"
+                                label="FiscalYear"
+                                name="FiscalYear"
+                                nogen="true"
+                                required="true"
+                                testWith="2024"
+                                type="string"/>
+                     <parameter description="Six-Character Posting Item for Ledger"
+                                label="DocumentLineNumber"
+                                name="DocumentLineNumber"
+                                nogen="true"
+                                required="true"
+                                testWith="000001"
+                                type="string"/>
+                     <parameter description="Document Number of an Accounting Document"
+                                label="DocumentNumber"
+                                name="DocumentNumber"
+                                nogen="true"
+                                required="true"
+                                testWith="4200000164"
+                                type="string"/>
+                     <parameter description="Company Code"
+                                label="CompanyCode"
+                                name="CompanyCode"
+                                nogen="true"
+                                required="true"
+                                testWith="1855"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://services.qa.simba.psu.edu/sap/opu/odata/sap/ZC_FICO_ACCOUNTINGDOCS_CDS/ZC_FICO_ACCOUNTINGDOCS(CompanyCode='{ $CompanyCode }',FiscalYear='{ $FiscalYear }',DocumentNumber='{ $DocumentNumber }',DocumentLineNumber='{ $DocumentLineNumber }')?spnego=disabled"
+                                        verb="GET">
+                        <authentication>
+                           <username>IICSIWAQ</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="true">
+                           <keyStore mode="file">E:\s8-iwa-devsa1.ad.psu.edu_InCommon_CA\s8-iwa-devsa1.ad.psu.edu.jks</keyStore>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Retrieved entity"
+                            entireResponse="true"
+                            name="gET_ZC_FICO_ACCOUNTINGDOCS_CompanyCode____FiscalYear____DocumentNumber____DocumentLineNumber____Response"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">GET_ZC_FICO_ACCOUNTINGDOCS_CompanyCode____FiscalYear____DocumentNumber____DocumentLineNumber____Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="GET_ZC_FICO_ACCOUNTINGDOCS_CompanyCode____FiscalYear____DocumentNumber____DocumentLineNumber____Response">
+                  <description/>
+                  <detail>
+                     <field label="d"
+                            name="d"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">ZC_FICO_ACCOUNTINGDOCS_CDS_ZC_FICO_ACCOUNTINGDOCSType</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="GET_ZC_FICO_ACCOUNTINGDOCSResponse">
+                  <description/>
+                  <detail>
+                     <field label="d"
+                            name="d"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">D</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="PicklistObject">
+                  <description>Simple type wrapper object for usage in arrays</description>
+                  <detail>
+                     <field label="picklistObject"
+                            name="picklistObject"
+                            nullable="true"
+                            required="false"
+                            type="picklist"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="ZC_FICO_ACCOUNTINGDOCS_CDS_ZC_FICO_ACCOUNTINGDOCSType">
+                  <description/>
+                  <detail>
+                     <field label="CompanyCode"
+                            name="CompanyCode"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="FiscalYear"
+                            name="FiscalYear"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="DocumentNumber"
+                            name="DocumentNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="DocumentLineNumber"
+                            name="DocumentLineNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">6</option>
+                        </options>
+                     </field>
+                     <field label="DocumentDate"
+                            name="DocumentDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="PostingDate"
+                            name="PostingDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="FiscalPeriod"
+                            name="FiscalPeriod"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">2</option>
+                        </options>
+                     </field>
+                     <field label="Reference"
+                            name="Reference"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">16</option>
+                        </options>
+                     </field>
+                     <field label="DocumentHeaderText"
+                            name="DocumentHeaderText"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">25</option>
+                        </options>
+                     </field>
+                     <field label="DocumentType"
+                            name="DocumentType"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">2</option>
+                        </options>
+                     </field>
+                     <field label="GLAccount"
+                            name="GLAccount"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="DebitCreditIndicator"
+                            name="DebitCreditIndicator"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">1</option>
+                        </options>
+                     </field>
+                     <field label="AmountInLocalCurrency"
+                            name="AmountInLocalCurrency"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field label="CostCenter"
+                            name="CostCenter"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="InternalOrder"
+                            name="InternalOrder"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">12</option>
+                        </options>
+                     </field>
+                     <field label="WBSElement"
+                            name="WBSElement"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">12</option>
+                        </options>
+                     </field>
+                     <field label="Fund"
+                            name="Fund"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="FunctionalArea"
+                            name="FunctionalArea"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">16</option>
+                        </options>
+                     </field>
+                     <field label="GrantNumber"
+                            name="GrantNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="BusinessArea"
+                            name="BusinessArea"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="Assignment"
+                            name="Assignment"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">18</option>
+                        </options>
+                     </field>
+                     <field label="LineItemText"
+                            name="LineItemText"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">50</option>
+                        </options>
+                     </field>
+                     <field label="Asset"
+                            name="Asset"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">12</option>
+                        </options>
+                     </field>
+                     <field label="SubAsset"
+                            name="SubAsset"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="PersonnelNumber"
+                            name="PersonnelNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="EarmarkedFundsDocumentNumber"
+                            name="EarmarkedFundsDocumentNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="EarmarkedFundsDocumentItem"
+                            name="EarmarkedFundsDocumentItem"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">3</option>
+                        </options>
+                     </field>
+                     <field label="EarmarkedFundsCompleteFlag"
+                            name="EarmarkedFundsCompleteFlag"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field label="AgProjectNumber"
+                            name="AgProjectNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="CRISCode"
+                            name="CRISCode"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">3</option>
+                        </options>
+                     </field>
+                     <field label="SpecialProjectsTrackingNumber"
+                            name="SpecialProjectsTrackingNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">12</option>
+                        </options>
+                     </field>
+                     <field label="CapitalPlanYear"
+                            name="CapitalPlanYear"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="OPPInternalNumber"
+                            name="OPPInternalNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">20</option>
+                        </options>
+                     </field>
+                     <field label="GLAccountName"
+                            name="GLAccountName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">20</option>
+                        </options>
+                     </field>
+                     <field label="CostCenterName"
+                            name="CostCenterName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">20</option>
+                        </options>
+                     </field>
+                     <field label="InternalOrderName"
+                            name="InternalOrderName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">40</option>
+                        </options>
+                     </field>
+                     <field label="ReverseDocumentNumber"
+                            name="ReverseDocumentNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="FundsCenter"
+                            name="FundsCenter"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="FundedProgram"
+                            name="FundedProgram"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">24</option>
+                        </options>
+                     </field>
+                     <field label="Quantity"
+                            name="Quantity"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field label="UnitOfMeasure"
+                            name="UnitOfMeasure"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">3</option>
+                        </options>
+                     </field>
+                     <field label="Vendor"
+                            name="Vendor"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="VendorName"
+                            name="VendorName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">35</option>
+                        </options>
+                     </field>
+                     <field label="Customer"
+                            name="Customer"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="CustomerName"
+                            name="CustomerName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">35</option>
+                        </options>
+                     </field>
+                     <field label="AssetValueDate"
+                            name="AssetValueDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="PurchasingDocumentNumber"
+                            name="PurchasingDocumentNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="PurchasingDocumentLineNumber"
+                            name="PurchasingDocumentLineNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">5</option>
+                        </options>
+                     </field>
+                     <field label="SubFunctionReporting"
+                            name="SubFunctionReporting"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="HERDCode"
+                            name="HERDCode"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">9</option>
+                        </options>
+                     </field>
+                     <field label="WorkStartDate"
+                            name="WorkStartDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="WorkEndDate"
+                            name="WorkEndDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="UGCode"
+                            name="UGCode"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="ParkedByUserName"
+                            name="ParkedByUserName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">12</option>
+                        </options>
+                     </field>
+                     <field label="DocumentPosted"
+                            name="DocumentPosted"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">1</option>
+                        </options>
+                     </field>
+                     <field label="EntryDate"
+                            name="EntryDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="EntryTime"
+                            name="EntryTime"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">6</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="D">
+                  <description/>
+                  <detail>
+                     <field label="___count"
+                            name="count"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options/>
+                     </field>
+                     <field label="results"
+                            name="results"
+                            nullable="true"
+                            required="false"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo">ZC_FICO_ACCOUNTINGDOCS_CDS_ZC_FICO_ACCOUNTINGDOCSType</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>dkxrLI4sSCPe175bc5dIYk</types1:GUID>
+      <types1:DisplayName>sc_SimbaFinancialDocumentSearchFD2100</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-05T16:04:55.593Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "5slX5lpSPwRbMaWw0XKJYX",
+    "name" : "SIMBA_NT",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Northern Trust PIPO Conversion.",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-05T16:04:59.672Z",
+  "objectRefs" : [ ]
+}

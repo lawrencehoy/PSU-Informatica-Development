@@ -1,0 +1,48 @@
+{
+  "objectInfo" : {
+    "id" : "6WG69n7YdfJdCSqkB6V5oK",
+    "name" : "mp_Simba_Jv_Chk_with_compare_LRH",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C95117000000000037"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-07-05T16:04:59.664Z",
+  "objectRefs" : [ {
+    "id" : "7nbFj9UOIIFgr4uaPyqCGK",
+    "name" : "SIMBA_MfteSimbaToProcessIics",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510B00000000000O"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection to MFTe Directory for Simba Pipo",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

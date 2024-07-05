@@ -1,0 +1,71 @@
+{
+  "objectInfo" : {
+    "id" : "jC5HIJZe7gnez7fizHrx2K",
+    "name" : "mp_SimbaNtInvestmentsLtip_DecodeCharacteristic",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9511700000000004G"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-07-05T16:04:59.670Z",
+  "objectRefs" : [ {
+    "id" : "7nbFj9UOIIFgr4uaPyqCGK",
+    "name" : "SIMBA_MfteSimbaToProcessIics",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510B00000000000O"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection to MFTe Directory for Simba Pipo",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3yGp30HivBAj0Q1rYuXEyA",
+    "name" : "fwff_NTInvestmentPricing",
+    "type" : "FWCONFIG",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C95129000000000002"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Fixed-width file format for SIMBA Northern Trust Investment Pricing (734) and Investment Pricing Factor (734_Factor) files.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/SIMBA_NT"
+  } ]
+}

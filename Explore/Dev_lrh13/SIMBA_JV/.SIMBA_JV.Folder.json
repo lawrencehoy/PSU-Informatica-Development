@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "4imLh0ocqYYl2138KAFl4H",
+    "name" : "SIMBA_JV",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "JV ACH and Checks Conversion.",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-05T16:04:59.665Z",
+  "objectRefs" : [ ]
+}

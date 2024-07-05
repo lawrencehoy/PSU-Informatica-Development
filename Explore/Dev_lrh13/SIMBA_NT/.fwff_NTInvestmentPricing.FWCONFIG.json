@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "3yGp30HivBAj0Q1rYuXEyA",
+    "name" : "fwff_NTInvestmentPricing",
+    "type" : "FWCONFIG",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C95129000000000002"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Fixed-width file format for SIMBA Northern Trust Investment Pricing (734) and Investment Pricing Factor (734_Factor) files.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-07-05T16:04:59.672Z",
+  "objectRefs" : [ ]
+}

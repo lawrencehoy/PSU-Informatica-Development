@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "dkxrLI4sSCPe175bc5dIYk",
+    "name" : "sc_SimbaFinancialDocumentSearchFD2100",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "yzBvlEQT53nQciS-gt-9544858-2024-03-21T12:56:12.392Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get financial document records from SIMBA",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-05T16:04:59.661Z",
+  "objectRefs" : [ ]
+}

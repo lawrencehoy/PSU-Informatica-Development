@@ -1,0 +1,48 @@
+{
+  "objectInfo" : {
+    "id" : "bVaY1TTxV0peWL8DUwvgUi",
+    "name" : "tf_SimbaNorthernTrustInvestmentsOiLRH",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "89UwLsciQlBWlD2-gt-3692341-2023-10-13T17:38:00.95Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-05T16:04:59.662Z",
+  "objectRefs" : [ {
+    "id" : "d9qLZezXe2MjD3IRR2T7KU",
+    "name" : "mpt_SimbaNorthernTrustInvestmentsOi",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z00000000003E"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/SIMBA_NT"
+  } ]
+}

@@ -1,0 +1,48 @@
+{
+  "objectInfo" : {
+    "id" : "09SQ0lHndvyhwJMgAUL0u9",
+    "name" : "tf_Simba_Jv_Ach_LRH",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "9WYzr3tfUbbf5ZK-gt-16775906-2023-06-12T13:41:53.968Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-05T16:04:59.664Z",
+  "objectRefs" : [ {
+    "id" : "1nVecO4qpKghUYdP7yUX26",
+    "name" : "mpt_Simba_Jv_Ach_LRH",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z00000000002I"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/SIMBA_JV"
+  } ]
+}

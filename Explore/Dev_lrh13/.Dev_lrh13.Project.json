@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "4zmJaMPlfLGbSI4kbhhf4W",
+    "name" : "Dev_lrh13",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Development Workspace For Lawrence Hoy-lrh13. Not Intended As An Informatica Project And Will Not Be Promoted To Other Environments.",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-05T16:04:59.659Z",
+  "objectRefs" : [ ]
+}

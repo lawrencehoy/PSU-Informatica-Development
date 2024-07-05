@@ -1,0 +1,326 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>clopz4KhPVEQrXh-gt-5081960-2024-03-07T17:45:53.042Z::svc.xml</types1:EntryId>
+      <types1:Name>sc_SimbaFundMasterFD2100-2</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Get SIMBA fund master data records</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>lrh13@psu.edu.SAML2</types1:CreatedBy>
+      <types1:CreationDate>2024-03-07T17:45:53Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="sc_SimbaFundMasterFD2100"
+                            label=""
+                            name="sc_SimbaFundMasterFD2100-2"
+                            uuid="c7486da3-f8f2-4347-bddd-24d5d037001e">
+            <description>Get SIMBA fund master data records</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_ZC_FICO_FUND_MASTERByProperties"
+                       maxRedirects="100"
+                       name="GET_ZC_FICO_FUND_MASTERByProperties"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get entities from ZC_FICO_FUND_MASTER</description>
+                  <input>
+                     <parameter description="Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)"
+                                label="offset"
+                                name="offset"
+                                required="false"
+                                testWith=""
+                                type="int"/>
+                     <parameter description="Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)"
+                                label="limit"
+                                name="limit"
+                                required="false"
+                                testWith=""
+                                type="int"/>
+                     <parameter description="Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)"
+                                label="filter"
+                                name="filter"
+                                required="true"
+                                testWith="FundTypeCode%20ge%20%2750%27and%20FundTypeCode%20lt%20%2770%27"
+                                type="string"/>
+                     <parameter description="Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)"
+                                label="inlinecount"
+                                name="inlinecount"
+                                required="false"
+                                testWith="allpages"
+                                type="string"/>
+                     <parameter description="Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)"
+                                label="orderby"
+                                name="orderby"
+                                required="false"
+                                testWith="FundNumber%20asc"
+                                type="string"/>
+                     <parameter description="Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)"
+                                label="select"
+                                name="select"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://services.dev.simba.psu.edu/sap/opu/odata/sap/ZC_FICO_FUND_MASTER_CDS/ZC_FICO_FUND_MASTER?spnego=disabled&amp;amp;%24top={ $offset }&amp;amp;%24skip={ $limit }&amp;amp;%24filter={ $filter }&amp;amp;%24inlinecount={ $inlinecount  }&amp;amp;%24orderby={ $orderby  }&amp;amp;%24select={ $select  }"
+                                        verb="GET">
+                        <authentication>
+                           <username>IICSIWAD</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="true">
+                           <keyStore mode="file">E:\s8-iwa-devsa1.ad.psu.edu_InCommon_CA\s8-iwa-devsa1.ad.psu.edu.jks</keyStore>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Retrieved entities"
+                            entireResponse="true"
+                            name="GET_ZC_FICO_FUND_MASTERResponse"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">GET_ZC_FICO_FUND_MASTERResponse</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_ZC_FICO_FUND_MASTERByKey"
+                       maxRedirects="100"
+                       name="GET_ZC_FICO_FUND_MASTERByKey"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get entity from ZC_FICO_FUND_MASTER by key</description>
+                  <input>
+                     <parameter description="Financial Management Area"
+                                label="FundArea"
+                                name="FundArea"
+                                nogen="true"
+                                required="true"
+                                testWith="1855"
+                                type="string"/>
+                     <parameter description="Fund"
+                                label="FundNumber"
+                                name="FundNumber"
+                                nogen="true"
+                                required="true"
+                                testWith="1110000008"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://services.dev.simba.psu.edu/sap/opu/odata/sap/ZC_FICO_FUND_MASTER_CDS/ZC_FICO_FUND_MASTER(FundArea='{ $FundArea }',FundNumber='{ $FundNumber }')?spnego=disabled"
+                                        verb="GET">
+                        <authentication>
+                           <username>IICSIWAD</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="true">
+                           <keyStore mode="file">E:\s8-iwa-devsa1.ad.psu.edu_InCommon_CA\s8-iwa-devsa1.ad.psu.edu.jks</keyStore>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Retrieved entity"
+                            entireResponse="true"
+                            name="GET_ZC_FICO_FUND_MASTER_FundArea____FundNumber____Response"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">GET_ZC_FICO_FUND_MASTER_FundArea____FundNumber____Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="GET_ZC_FICO_FUND_MASTERResponse">
+                  <description/>
+                  <detail>
+                     <field label="d"
+                            name="d"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">D</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="PicklistObject">
+                  <description>Simple type wrapper object for usage in arrays</description>
+                  <detail>
+                     <field label="picklistObject"
+                            name="picklistObject"
+                            nullable="true"
+                            required="false"
+                            type="picklist"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="GET_ZC_FICO_FUND_MASTER">
+                  <description/>
+                  <detail>
+                     <field label="d"
+                            name="d"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">ZC_FICO_FUND_MASTER_CDS_ZC_FICO_FUND_MASTERType</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="D">
+                  <description/>
+                  <detail>
+                     <field label="___count"
+                            name="count"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options/>
+                     </field>
+                     <field label="results"
+                            name="results"
+                            nullable="true"
+                            required="false"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo">ZC_FICO_FUND_MASTER_CDS_ZC_FICO_FUND_MASTERType</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="ZC_FICO_FUND_MASTER_CDS_ZC_FICO_FUND_MASTERType">
+                  <description/>
+                  <detail>
+                     <field label="FundArea"
+                            name="FundArea"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">4</option>
+                        </options>
+                     </field>
+                     <field label="FundNumber"
+                            name="FundNumber"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">10</option>
+                        </options>
+                     </field>
+                     <field label="FundName"
+                            name="FundName"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">20</option>
+                        </options>
+                     </field>
+                     <field label="FundDescription"
+                            name="FundDescription"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">40</option>
+                        </options>
+                     </field>
+                     <field label="FundTypeCode"
+                            name="FundTypeCode"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">6</option>
+                        </options>
+                     </field>
+                     <field label="FundTypeCodeDescription"
+                            name="FundTypeCodeDescription"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">35</option>
+                        </options>
+                     </field>
+                     <field label="FundValidFromDate"
+                            name="FundValidFromDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="FundValidToDate"
+                            name="FundValidToDate"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">8</option>
+                        </options>
+                     </field>
+                     <field label="ChargeableIndicator"
+                            name="ChargeableIndicator"
+                            nullable="true"
+                            required="false"
+                            type="string">
+                        <options>
+                           <option name="length">1</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>1prIRfPZyKUilhA4eDx6Cq</types1:GUID>
+      <types1:DisplayName>sc_SimbaFundMasterFD2100</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-05T16:04:55.615Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
