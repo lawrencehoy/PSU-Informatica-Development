@@ -1,0 +1,714 @@
+{
+  "content" : {
+    "description" : "Copy Control-M Test Reports from IWA_Development folder to Larry_Folder.",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_IwaCtmTestReporting",
+    "flowOrderEntries" : [
+      {
+        "sourceTypes" : [
+          "Source"
+        ],
+        "sources" : [
+          "src_IwaTestJobDefinitions"
+        ],
+        "targetTypes" : [
+          "Target"
+        ],
+        "targets" : [
+          "tgt_IwaTestJobDefinitionsLarry"
+        ]
+      },
+      {
+        "sourceTypes" : [
+          "Source"
+        ],
+        "sources" : [
+          "src_IwaTestMftJobs"
+        ],
+        "targetTypes" : [
+          "Target"
+        ],
+        "targets" : [
+          "tgt_IwaTestMftJobsLarry"
+        ]
+      }
+    ],
+    "links" : [
+      {
+        "link" : "src_IwaTestJobDefinitions -> tgt_IwaTestJobDefinitionsLarry"
+      },
+      {
+        "link" : "src_IwaTestMftJobs -> tgt_IwaTestMftJobsLarry"
+      }
+    ],
+    "transformations" : [
+      {
+        "description" : "Source Job Definitions file, IWA_Development folder.",
+        "createTime" : "2024-07-10T17:05:10.585Z",
+        "name" : "src_IwaTestJobDefinitions",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Change_date"
+            },
+            "name" : "Change_date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Creation_Date"
+            },
+            "name" : "Creation_Date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Description"
+            },
+            "name" : "Description",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Host"
+            },
+            "name" : "Host",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "label" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "objectName" : "Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "path" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Change_date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Change date",
+                "nativeName" : "Change date",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Creation_Date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Creation Date",
+                "nativeName" : "Creation Date",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Description",
+                "fieldType" : "CONNECTOR",
+                "label" : "Description",
+                "nativeName" : "Description",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Host",
+                "fieldType" : "CONNECTOR",
+                "label" : "Host",
+                "nativeName" : "Host",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Target Job Definitions file, Larry_Folder.",
+        "createTime" : "2024-07-10T17:05:10.585Z",
+        "name" : "tgt_IwaTestJobDefinitionsLarry",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          },
+          {
+            "name" : "Output file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Larry_Folder\\outgoing\\"
+          },
+          {
+            "name" : "Output filename",
+            "value" : "ReportOutput_%y%m%d%H%M%S.txt"
+          },
+          {
+            "name" : "Reject file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Larry_Folder\\outgoing\\"
+          },
+          {
+            "name" : "Reject filename",
+            "value" : "ReportRejects_%y%m%d%H%M%S.txt"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Test Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
+            "label" : "Test Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
+            "path" : "Test Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : "\t",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "true",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Source MFT Job file, IWA_Development folder.",
+        "createTime" : "2024-07-10T17:05:10.585Z",
+        "name" : "src_IwaTestMftJobs",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Job_Name"
+            },
+            "name" : "Job_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Status"
+            },
+            "name" : "Status",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "File_Transfer_Start_Time"
+            },
+            "name" : "File_Transfer_Start_Time",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Transfer_Duration"
+            },
+            "name" : "Transfer_Duration",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Destination_Protocol"
+            },
+            "name" : "Destination_Protocol",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "File_Size"
+            },
+            "name" : "File_Size",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv",
+            "label" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv",
+            "objectName" : "Test MFT (Transfers for PowerBI) 20250406000025.csv",
+            "path" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Job_Name",
+                "fieldType" : "CONNECTOR",
+                "label" : "Job Name",
+                "nativeName" : "Job Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Status",
+                "fieldType" : "CONNECTOR",
+                "label" : "Status",
+                "nativeName" : "Status",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "File_Transfer_Start_Time",
+                "fieldType" : "CONNECTOR",
+                "label" : "File Transfer Start Time",
+                "nativeName" : "File Transfer Start Time",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Transfer_Duration",
+                "fieldType" : "CONNECTOR",
+                "label" : "Transfer Duration",
+                "nativeName" : "Transfer Duration",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Destination_Protocol",
+                "fieldType" : "CONNECTOR",
+                "label" : "Destination Protocol",
+                "nativeName" : "Destination Protocol",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "File_Size",
+                "fieldType" : "CONNECTOR",
+                "label" : "File Size",
+                "nativeName" : "File Size",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Target MFT Jobs file, Larry_Folder.",
+        "createTime" : "2024-07-10T17:05:10.585Z",
+        "name" : "tgt_IwaTestMftJobsLarry",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          },
+          {
+            "name" : "Output file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Larry_Folder\\outgoing\\"
+          },
+          {
+            "name" : "Output filename",
+            "value" : "ReportOutput_%y%m%d%H%M%S.txt"
+          },
+          {
+            "name" : "Reject file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Larry_Folder\\outgoing\\"
+          },
+          {
+            "name" : "Reject filename",
+            "value" : "ReportRejects_%y%m%d%H%M%S.txt"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Test MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
+            "label" : "Test MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
+            "path" : "Test MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : "\t",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "true",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-10 09:30:58 EDT"
+}

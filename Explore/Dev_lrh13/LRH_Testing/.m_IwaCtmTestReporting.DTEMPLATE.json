@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "1eerag8BpYueuBnki1BtCD",
+    "name" : "m_IwaCtmTestReporting",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C951170000000000S1"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Copy Control-M Test Reports from IWA_Development folder to Larry_Folder.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-04-10T13:30:58.659Z",
+  "objectRefs" : [ {
+    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
+    "name" : "IWADEV_FfMfte",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510B000000000039"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection used as a Source and Target location for personal development.",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}
