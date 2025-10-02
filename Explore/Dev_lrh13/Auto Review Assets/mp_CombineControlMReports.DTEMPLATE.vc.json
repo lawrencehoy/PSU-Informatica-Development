@@ -1,0 +1,809 @@
+{
+  "content" : {
+    "description" : "Mapping to combine Control-M Job Definitions report and Control-M MFT File Transfers report; joining on the Job Name fields.",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "mp_CombineControlMReports",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "src_JobDefinitions -> jnr_CombineJobDefsAndFileTrasnfersReportData",
+        "groupLink" : "DefaultGroup -> Master"
+      },
+      {
+        "link" : "src_MftTransfers -> jnr_CombineJobDefsAndFileTrasnfersReportData",
+        "groupLink" : "DefaultGroup -> Detail"
+      },
+      {
+        "link" : "exp_AddCurrentDateTimeStampField -> tgt_Target"
+      },
+      {
+        "link" : "jnr_CombineJobDefsAndFileTrasnfersReportData -> exp_AddCurrentDateTimeStampField",
+        "groupLink" : "OutputGroup -> DefaultGroup"
+      }
+    ],
+    "parameters" : [
+      {
+        "description" : "Target filename.",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "p_TargetFielname"
+      }
+    ],
+    "transformations" : [
+      {
+        "description" : "Control-M Report for all Job Definitions.",
+        "createTime" : "2024-11-18T13:52:38.117Z",
+        "name" : "src_JobDefinitions",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Application"
+            },
+            "name" : "Application",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Sub_Application"
+            },
+            "name" : "Sub_Application",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Job_Name"
+            },
+            "name" : "Job_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Active_From"
+            },
+            "name" : "Active_From",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Active_Till"
+            },
+            "name" : "Active_Till",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Job_Type"
+            },
+            "name" : "Job_Type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Change_date"
+            },
+            "name" : "Change_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "Creation_Date"
+            },
+            "name" : "Creation_Date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "Description"
+            },
+            "name" : "Description",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Host"
+            },
+            "name" : "Host",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv",
+            "label" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv",
+            "objectName" : "Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv",
+            "path" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Application",
+                "fieldType" : "CONNECTOR",
+                "label" : "Application",
+                "nativeName" : "Application",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Sub_Application",
+                "fieldType" : "CONNECTOR",
+                "label" : "Sub Application",
+                "nativeName" : "Sub Application",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Job_Name",
+                "fieldType" : "CONNECTOR",
+                "label" : "Job Name",
+                "nativeName" : "Job Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Active_From",
+                "fieldType" : "CONNECTOR",
+                "label" : "Active From",
+                "nativeName" : "Active From",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Active_Till",
+                "fieldType" : "CONNECTOR",
+                "label" : "Active Till",
+                "nativeName" : "Active Till",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Job_Type",
+                "fieldType" : "CONNECTOR",
+                "label" : "Job Type",
+                "nativeName" : "Job Type",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Change_date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Change date",
+                "nativeName" : "Change date",
+                "nativeType" : "datetime",
+                "original" : "false",
+                "precision" : 29,
+                "scale" : 9,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Creation_Date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Creation Date",
+                "nativeName" : "Creation Date",
+                "nativeType" : "datetime",
+                "original" : "false",
+                "precision" : 29,
+                "scale" : 9,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Description",
+                "fieldType" : "CONNECTOR",
+                "label" : "Description",
+                "nativeName" : "Description",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Host",
+                "fieldType" : "CONNECTOR",
+                "label" : "Host",
+                "nativeName" : "Host",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Output data.",
+        "createTime" : "2024-11-18T13:52:38.120Z",
+        "name" : "tgt_Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "outgoing/ControlMReportsCombinedData_%y%m%d%H%M%S.csv",
+            "label" : "outgoing/ControlMReportsCombinedData_%y%m%d%H%M%S.csv",
+            "path" : "outgoing/ControlMReportsCombinedData_%y%m%d%H%M%S.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "true",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Control-M Report for MFT File Transfers.",
+        "createTime" : "2024-11-18T13:57:51.583Z",
+        "name" : "src_MftTransfers",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Job_Name"
+            },
+            "name" : "Job_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Status"
+            },
+            "name" : "Status",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "File_Transfer_Start_Time"
+            },
+            "name" : "File_Transfer_Start_Time",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "Transfer_Duration"
+            },
+            "name" : "Transfer_Duration",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Destination_Protocol"
+            },
+            "name" : "Destination_Protocol",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "File_Size"
+            },
+            "name" : "File_Size",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv",
+            "label" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv",
+            "objectName" : "MFT (Transfers for PowerBI) 20250921000021.csv",
+            "path" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Job_Name",
+                "fieldType" : "CONNECTOR",
+                "label" : "Job Name",
+                "nativeName" : "Job Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Status",
+                "fieldType" : "CONNECTOR",
+                "label" : "Status",
+                "nativeName" : "Status",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "File_Transfer_Start_Time",
+                "fieldType" : "CONNECTOR",
+                "label" : "File Transfer Start Time",
+                "nativeName" : "File Transfer Start Time",
+                "nativeType" : "datetime",
+                "original" : "false",
+                "precision" : 29,
+                "scale" : 9,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Transfer_Duration",
+                "fieldType" : "CONNECTOR",
+                "label" : "Transfer Duration",
+                "nativeName" : "Transfer Duration",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Destination_Protocol",
+                "fieldType" : "CONNECTOR",
+                "label" : "Destination Protocol",
+                "nativeName" : "Destination Protocol",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "File_Size",
+                "fieldType" : "CONNECTOR",
+                "label" : "File Size",
+                "nativeName" : "File Size",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250921000021.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Joiner to combine data from Job Definitions report and MFT File Transfers reports.",
+        "createTime" : "2024-11-18T13:59:51.594Z",
+        "name" : "jnr_CombineJobDefsAndFileTrasnfersReportData",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Master",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "true",
+                "include" : "true",
+                "bulkRenameOption" : {
+                  "literal" : "JobDefinition_",
+                  "suffix" : "false"
+                }
+              }
+            ]
+          },
+          {
+            "input" : "true",
+            "name" : "Detail",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "true",
+                "include" : "true",
+                "bulkRenameOption" : {
+                  "literal" : "Transfers_",
+                  "suffix" : "false"
+                }
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "OutputGroup",
+            "output" : "true"
+          }
+        ],
+        "joinType" : "Master Outer Join",
+        "joinConditions" : [
+          {
+            "leftOperand" : "JobDefinition_Job_Name",
+            "operator" : "=",
+            "rightOperand" : "Transfers_Job_Name"
+          }
+        ]
+      },
+      {
+        "description" : "Add a field with the current DAte/Time.",
+        "createTime" : "2025-09-26T16:22:44.831Z",
+        "name" : "exp_AddCurrentDateTimeStampField",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "out_CurrentDateTime",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Systimestamp()"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-10-02 15:25:11 EDT"
+}

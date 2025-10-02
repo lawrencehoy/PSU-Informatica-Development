@@ -1,0 +1,73 @@
+{
+  "objectInfo" : {
+    "id" : "5JHT3tJvscyhukcvPQOlKZ",
+    "name" : "tf_ControlMReportProcessing",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "8R5JlJjx9AWbg0Z-gt-16334087-2025-09-26T13:41:40.952Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Task flow to combine Control-M Job Definitions report and Control-M MFT File Transfers report, then extract specific job data.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-10-02T19:25:15.630Z",
+  "objectRefs" : [ {
+    "id" : "82wXIy44OS5em6G7qTfuqm",
+    "name" : "mpt_ExtractControlMReportData",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z0000000002YZ"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Execute mapping to extract report data.",
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/Auto Review Assets"
+  }, {
+    "id" : "7JzwN4fUHgTh2JMscHRS4U",
+    "name" : "mpt_CombineControlMReports",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z0000000002YX"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Execute mapping to combine Control-M Job Definitions & MFT File Transfers reports.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/Auto Review Assets"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

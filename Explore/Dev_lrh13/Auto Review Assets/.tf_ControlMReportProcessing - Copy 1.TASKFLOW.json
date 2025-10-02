@@ -1,0 +1,73 @@
+{
+  "objectInfo" : {
+    "id" : "kFBWcZkGRiGcpCUJMCNT6z",
+    "name" : "tf_ControlMReportProcessing - Copy 1",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "p5OjG4abck0Kn7w-gt-21585539-2025-10-02T14:32:30.24Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Task flow to combine Control-M Job Definitions report and Control-M MFT File Transfers report, then extract specific job data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-10-02T19:25:15.633Z",
+  "objectRefs" : [ {
+    "id" : "82wXIy44OS5em6G7qTfuqm",
+    "name" : "mpt_ExtractControlMReportData",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z0000000002YZ"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Execute mapping to extract report data.",
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/Auto Review Assets"
+  }, {
+    "id" : "7JzwN4fUHgTh2JMscHRS4U",
+    "name" : "mpt_CombineControlMReports",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z0000000002YX"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Execute mapping to combine Control-M Job Definitions & MFT File Transfers reports.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/Auto Review Assets"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
