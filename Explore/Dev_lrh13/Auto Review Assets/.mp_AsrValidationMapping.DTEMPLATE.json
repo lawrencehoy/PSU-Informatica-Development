@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "9xOMxGEnJmuiI44YjkV9ij",
-    "name" : "mp_CombineControlMReports",
+    "id" : "5IeAW2y7lSieiwJ7qIVx2L",
+    "name" : "mp_AsrValidationMapping",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,21 +9,21 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C9511700000000032D"
+        "repoHandle" : "01C95117000000000327"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Mapping to combine Control-M Job Definitions report and Control-M MFT File Transfers report; joining on the Job Name fields.",
+        "description" : "Mapping with transformations necessary to validate Automated Standards Review code.",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T19:41:01.568Z",
+  "updateTime" : "2025-11-20T19:41:01.569Z",
   "objectRefs" : [ {
     "id" : "8UEBE1uX1ElfgCsIvgNMW5",
     "name" : "IWADEV_FfMfte",

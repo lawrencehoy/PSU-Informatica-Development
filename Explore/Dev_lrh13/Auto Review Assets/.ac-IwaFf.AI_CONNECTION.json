@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "5rlISy5BgvBiTLkwC1h1UJ",
+    "name" : "ac-IwaFf",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "up3yD7tyGoQwg74-gt-702060-2025-10-24T12:38:58.335Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "App Connection created for testing Owner Managed Asset project permissions.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-11-20T19:41:01.567Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -133,10 +133,10 @@
             },
             "name" : "Change_date",
             "platformType" : {
-              "name" : "date/time"
+              "name" : "string"
             },
-            "precision" : 29,
-            "scale" : 9
+            "precision" : 255,
+            "scale" : 0
           },
           {
             "adapterField" : {
@@ -144,10 +144,10 @@
             },
             "name" : "Creation_Date",
             "platformType" : {
-              "name" : "date/time"
+              "name" : "string"
             },
-            "precision" : 29,
-            "scale" : 9
+            "precision" : 255,
+            "scale" : 0
           },
           {
             "adapterField" : {
@@ -287,10 +287,10 @@
                 "fieldType" : "CONNECTOR",
                 "label" : "Change date",
                 "nativeName" : "Change date",
-                "nativeType" : "datetime",
+                "nativeType" : "nstring",
                 "original" : "false",
-                "precision" : 29,
-                "scale" : 9,
+                "precision" : 255,
+                "scale" : 0,
                 "properties" : [
                   {
                     "name" : "parentObject",
@@ -303,10 +303,10 @@
                 "fieldType" : "CONNECTOR",
                 "label" : "Creation Date",
                 "nativeName" : "Creation Date",
-                "nativeType" : "datetime",
+                "nativeType" : "nstring",
                 "original" : "false",
-                "precision" : 29,
-                "scale" : 9,
+                "precision" : 255,
+                "scale" : 0,
                 "properties" : [
                   {
                     "name" : "parentObject",
@@ -543,10 +543,10 @@
             },
             "name" : "File_Transfer_Start_Time",
             "platformType" : {
-              "name" : "date/time"
+              "name" : "string"
             },
-            "precision" : 29,
-            "scale" : 9
+            "precision" : 255,
+            "scale" : 0
           },
           {
             "adapterField" : {
@@ -633,10 +633,10 @@
                 "fieldType" : "CONNECTOR",
                 "label" : "File Transfer Start Time",
                 "nativeName" : "File Transfer Start Time",
-                "nativeType" : "datetime",
+                "nativeType" : "nstring",
                 "original" : "false",
-                "precision" : 29,
-                "scale" : 9,
+                "precision" : 255,
+                "scale" : 0,
                 "properties" : [
                   {
                     "name" : "parentObject",
@@ -805,5 +805,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-10-02 15:25:11 EDT"
+  "vcsExportTime" : "2025-11-20 14:41:00 EST"
 }
