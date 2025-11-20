@@ -18,8 +18,8 @@
         "visible" : "false",
         "originalPath" : "src_NorthernTrustInvestmentsNEF"
       },
-      "sourceConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "sourceConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "newFlatFile" : false,
       "newObject" : false,
       "showBusinessNames" : false,
@@ -63,6 +63,7 @@
       "retainFieldMetadata" : false,
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -82,8 +83,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_NEFInvestmentFactorPricing"
       },
-      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "targetObject" : "$tgt_NEFInvestmentFactorPricing",
       "targetObjectLabel" : "NEF_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
       "newFlatFile" : false,
@@ -120,10 +121,12 @@
       "objectLabel" : "NEF_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
+      "targetSchemaProviderType" : "SELECTED_OBJECT",
       "restmodernSource" : true,
       "unspecified" : false,
       "fileList" : false
@@ -139,8 +142,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_NEFInvestmentPricing"
       },
-      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "targetObject" : "$tgt_NEFInvestmentPricing",
       "targetObjectLabel" : "NEF_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
       "newFlatFile" : false,
@@ -177,10 +180,12 @@
       "objectLabel" : "NEF_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
+      "targetSchemaProviderType" : "SELECTED_OBJECT",
       "restmodernSource" : true,
       "unspecified" : false,
       "fileList" : false
@@ -196,8 +201,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_NEFInvestments"
       },
-      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "targetObject" : "$tgt_NEFInvestments",
       "targetObjectLabel" : "NEF_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
       "newFlatFile" : false,
@@ -232,10 +237,12 @@
       "objectLabel" : "NEF_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
+      "targetSchemaProviderType" : "SELECTED_OBJECT",
       "restmodernSource" : true,
       "unspecified" : false,
       "fileList" : false
@@ -280,5 +287,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-11-20 14:58:44 EST"
+  "vcsExportTime" : "2025-11-20 15:19:45 EST"
 }

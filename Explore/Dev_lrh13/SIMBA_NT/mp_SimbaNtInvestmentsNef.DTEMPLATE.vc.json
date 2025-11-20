@@ -213,8 +213,8 @@
           }
         ],
         "dataAdapter" : {
-          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
-          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "FILE_LIST",
           "typeSystem" : "CSVFile",
@@ -569,8 +569,8 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "dataAdapter" : {
-          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
-          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
           "typeSystem" : "CSVFile",
@@ -1015,8 +1015,8 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "dataAdapter" : {
-          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
-          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
           "excludeDynamicFileNameField" : "false",
           "fwConfigId" : "@3yGp30HivBAj0Q1rYuXEyA",
           "fwConfigName" : "fwff_NTInvestmentPricing",
@@ -1272,7 +1272,7 @@
             "precision" : 20,
             "scale" : 0,
             "expFieldType" : "OUTPUT",
-            "expression" : "RTrim(RTrim(To_Char( \n Round(1000000*   \n   Abs((OIFactor_o_MV_BSE/\n   OIFactor_o_A_COST_BSE))\n  , 6)\n )\n, '0'), '.')"
+            "expression" : "RTrim(RTrim(To_Char( \n Round(1000000*   \n   Abs((NEFFactor_o_MV_BSE/\n   NEFFactor_o_A_COST_BSE))\n  , 6)\n )\n, '0'), '.')"
           },
           {
             "defaultValue" : "'USD                 '",
@@ -1384,8 +1384,8 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "dataAdapter" : {
-          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
-          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
           "excludeDynamicFileNameField" : "false",
           "fwConfigId" : "@3yGp30HivBAj0Q1rYuXEyA",
           "fwConfigName" : "fwff_NTInvestmentPricing",
@@ -1476,5 +1476,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-11-20 14:58:43 EST"
+  "vcsExportTime" : "2025-11-20 15:19:44 EST"
 }
