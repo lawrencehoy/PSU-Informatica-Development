@@ -260,8 +260,8 @@
           }
         ],
         "dataAdapter" : {
-          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
-          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
           "typeSystem" : "CSVFile",
@@ -602,6 +602,20 @@
       {
         "createTime" : "2024-02-27T15:05:26.970Z",
         "name" : "tgt_SimbaSftpNorthernTrustLTIP716",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
         "groups" : [
           {
             "input" : "true",
@@ -615,8 +629,8 @@
             ]
           }
         ],
-        "createTarget" : "false",
-        "fieldMappingMode" : "MANUAL",
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
         "inputSorted" : "false",
         "schemaProviderType" : "SELECTED_OBJECT",
         "targetFieldsOrdered" : "false",
@@ -624,9 +638,40 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "dataAdapter" : {
+          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
+          "connectionName" : "IWADEV_FfMfte",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
           "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "DummyTarget.csv",
+            "label" : "DummyTarget.csv",
+            "path" : "DummyTarget.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
           "writeOptions" : {
             "batchSize" : 0,
             "bulkApi" : "false",
@@ -645,5 +690,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-11-20 14:39:04 EST"
+  "vcsExportTime" : "2025-11-20 15:22:54 EST"
 }

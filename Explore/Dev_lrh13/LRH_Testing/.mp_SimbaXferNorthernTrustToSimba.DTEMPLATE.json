@@ -18,15 +18,15 @@
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T19:39:07.563Z",
+  "updateTime" : "2025-11-20T20:22:57.234Z",
   "objectRefs" : [ {
-    "id" : "7nbFj9UOIIFgr4uaPyqCGK",
-    "name" : "SIMBA_FfMfteSimbaToProcessIics",
+    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
+    "name" : "IWADEV_FfMfte",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,11 +34,11 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C9510B00000000000O"
+        "repoHandle" : "01C9510B000000000039"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "Connection to MFTe Directory for Simba Pipo",
+        "description" : "Connection used as a Source and Target location for personal development.",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
