@@ -1,0 +1,62 @@
+{
+  "name" : "fwff_NTInvestmentPricing",
+  "description" : "Fixed-width file format for SIMBA Northern Trust Investment Pricing (734) and Investment Pricing Factor (734_Factor) files.",
+  "lineSequential" : true,
+  "padBytes" : 0,
+  "skipRows" : 0,
+  "nullChar" : "*",
+  "nullCharType" : "ASCII",
+  "repeatNullChar" : false,
+  "stripTrailingBlank" : false,
+  "columns" : [
+    {
+      "name" : "DataClass",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "Key1",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    },
+    {
+      "name" : "Key2",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    },
+    {
+      "name" : "MarketDataType",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "Date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "Time",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "Value",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    },
+    {
+      "name" : "Currency",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    }
+  ],
+  "vcsExportTime" : "2025-11-20 14:34:40 EST"
+}

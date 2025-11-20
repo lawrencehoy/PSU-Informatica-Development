@@ -1,0 +1,284 @@
+{
+  "name" : "mpt_SimbaNorthernTrustInvestmentsOi",
+  "runtimeEnvironmentId" : "@8u0Nubkp2mmdiUXpslOJgG",
+  "runtimeEnvironmentName" : "S8-IWA-DevSA1",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$src_NorthernTrustInvestmentsOI$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "src_NorthernTrustInvestmentsOI",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "isFFGeneratePort" : "true",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "src_NorthernTrustInvestmentsOI"
+      },
+      "sourceConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
+      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "srcFFAttrs" : {
+        "delimiter" : "\t",
+        "textQualifier" : "none",
+        "headerLineNo" : 1,
+        "firstDataRow" : 2,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "firstDataRowAsHeader" : false,
+        "headerAndDataDelimiter" : 0
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT",
+          "label" : "OI_TRANSACTIONAL_REPORT_FILE.TXT",
+          "metadataUpdated" : false
+        },
+        "singleMode" : false,
+        "objects" : [
+          {
+            "name" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT",
+            "label" : "OI_TRANSACTIONAL_REPORT_FILE.TXT",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : true
+    },
+    {
+      "name" : "$tgt_OIInvestmentFactorPricing$",
+      "type" : "TARGET",
+      "label" : "tgt_OIInvestmentFactorPricing",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "tgt_OIInvestmentFactorPricing"
+      },
+      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
+      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetObject" : "$tgt_OIInvestmentFactorPricing",
+      "targetObjectLabel" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "$tgt_OIInvestmentFactorPricing",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "fwConfigId" : "@3yGp30HivBAj0Q1rYuXEyA",
+        "fwConfigName" : "fwff_NTInvestmentPricing"
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : true,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "$tgt_OIInvestmentFactorPricing",
+      "objectLabel" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$tgt_OIInvestmentPricing$",
+      "type" : "TARGET",
+      "label" : "tgt_OIInvestmentPricing",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "tgt_OIInvestmentPricing"
+      },
+      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
+      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetObject" : "$tgt_OIInvestmentPricing",
+      "targetObjectLabel" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "$tgt_OIInvestmentPricing",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "fwConfigId" : "@3yGp30HivBAj0Q1rYuXEyA",
+        "fwConfigName" : "fwff_NTInvestmentPricing"
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : true,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "$tgt_OIInvestmentPricing",
+      "objectLabel" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$tgt_OIInvestments$",
+      "type" : "TARGET",
+      "label" : "tgt_OIInvestments",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "tgt_OIInvestments"
+      },
+      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
+      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetObject" : "$tgt_OIInvestments",
+      "targetObjectLabel" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "$tgt_OIInvestments",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : "\t",
+        "textQualifier" : "none",
+        "headerLineNo" : 2147483647,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : true,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "$tgt_OIInvestments",
+      "objectLabel" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@iyCRIFIDlspbbQOvsGvUQg",
+  "mappingTemplateName" : "mp_SimbaNtInvestmentsOi",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Fallback Option",
+      "value" : "Partial PDO"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "jobPriority" : "MEDIUM",
+  "optimizationPlan" : "NONE",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-11-20 14:34:42 EST"
+}

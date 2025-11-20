@@ -1,0 +1,1480 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "mp_SimbaNtInvestmentsOi",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "exp_FormatOIInvestmentsPricingRecord -> tgt_OIInvestmentPricing"
+      },
+      {
+        "link" : "exp_FormatOIInvestmentsRecord -> tgt_OIInvestments"
+      },
+      {
+        "link" : "exp_FormatOIInvestmentsPricingFactorRecord -> tgt_OIInvestmentFactorPricing"
+      },
+      {
+        "link" : "rtr_OIRecords -> exp_FormatOIInvestmentsPricingRecord",
+        "groupLink" : "LTIPPricing -> DefaultGroup"
+      },
+      {
+        "link" : "rtr_OIRecords -> exp_FormatOIInvestmentsPricingFactorRecord",
+        "groupLink" : "LTIPPricingFactor -> DefaultGroup"
+      },
+      {
+        "link" : "rtr_OIRecords -> exp_FormatOIInvestmentsRecord",
+        "groupLink" : "LTIPInvestments -> DefaultGroup"
+      },
+      {
+        "link" : "src_NorthernTrustInvestmentsOI -> exp_OIDecimalConversions"
+      },
+      {
+        "link" : "exp_OIDecimalConversions -> rtr_OIRecords",
+        "groupLink" : "DefaultGroup -> INPUT"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2023-05-22T16:35:23.759Z",
+        "name" : "src_NorthernTrustInvestmentsOI",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "true",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Consolidation"
+            },
+            "name" : "Consolidation",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Account_Number"
+            },
+            "name" : "Account_Number",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "From_date"
+            },
+            "name" : "From_date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Through_date"
+            },
+            "name" : "Through_date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "T_CATG_DESC"
+            },
+            "name" : "T_CATG_DESC",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "A_COST_BSE"
+            },
+            "name" : "A_COST_BSE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "A_MV_BSE"
+            },
+            "name" : "A_MV_BSE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "C_CATG_TYPE"
+            },
+            "name" : "C_CATG_TYPE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "C_ROW_TYPE"
+            },
+            "name" : "C_ROW_TYPE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Account_name"
+            },
+            "name" : "Account_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Error_code"
+            },
+            "name" : "Error_code",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "C_VALN_TYPE_O"
+            },
+            "name" : "C_VALN_TYPE_O",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CurrentlyProcessedFileName"
+            },
+            "name" : "CurrentlyProcessedFileName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
+          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "FILE_LIST",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT",
+            "label" : "OI_TRANSACTIONAL_REPORT_FILE.TXT",
+            "objectName" : "OI_TRANSACTIONAL_REPORT_FILE.TXT",
+            "path" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Consolidation",
+                "fieldType" : "CONNECTOR",
+                "label" : "Consolidation",
+                "nativeName" : "Consolidation",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "Account_Number",
+                "fieldType" : "CONNECTOR",
+                "label" : "Account Number",
+                "nativeName" : "Account Number",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "From_date",
+                "fieldType" : "CONNECTOR",
+                "label" : "From date",
+                "nativeName" : "From date",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "Through_date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Through date",
+                "nativeName" : "Through date",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "T_CATG_DESC",
+                "fieldType" : "CONNECTOR",
+                "label" : "T-CATG-DESC",
+                "nativeName" : "T-CATG-DESC",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "A_COST_BSE",
+                "fieldType" : "CONNECTOR",
+                "label" : "A-COST-BSE",
+                "nativeName" : "A-COST-BSE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "A_MV_BSE",
+                "fieldType" : "CONNECTOR",
+                "label" : "A-MV-BSE",
+                "nativeName" : "A-MV-BSE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "C_CATG_TYPE",
+                "fieldType" : "CONNECTOR",
+                "label" : "C-CATG-TYPE",
+                "nativeName" : "C-CATG-TYPE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "C_ROW_TYPE",
+                "fieldType" : "CONNECTOR",
+                "label" : "C-ROW-TYPE",
+                "nativeName" : "C-ROW-TYPE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "Account_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "Account name",
+                "nativeName" : "Account name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "Error_code",
+                "fieldType" : "CONNECTOR",
+                "label" : "Error code",
+                "nativeName" : "Error code",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "C_VALN_TYPE_O",
+                "fieldType" : "CONNECTOR",
+                "label" : "C-VALN-TYPE-O",
+                "nativeName" : "C-VALN-TYPE-O",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/OI_TRANSACTIONAL_REPORT_FILE.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "CurrentlyProcessedFileName",
+                "fieldType" : "UNDEFINED",
+                "label" : "CurrentlyProcessedFileName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : "\t",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "none"
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-05-22T16:35:23.759Z",
+        "name" : "tgt_OIInvestments",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "AccruedInterestDailyMethod"
+                  },
+                  {
+                    "inputName" : "Amount"
+                  },
+                  {
+                    "inputName" : "BusinessPartnerNumber"
+                  },
+                  {
+                    "inputName" : "CalculationDate"
+                  },
+                  {
+                    "inputName" : "Characteristic"
+                  },
+                  {
+                    "inputName" : "CompanyCode"
+                  },
+                  {
+                    "inputName" : "FinancialTransactionType"
+                  },
+                  {
+                    "inputName" : "Fund"
+                  },
+                  {
+                    "inputName" : "Grant"
+                  },
+                  {
+                    "inputName" : "InternalReference"
+                  },
+                  {
+                    "inputName" : "NominalAmount"
+                  },
+                  {
+                    "inputName" : "PaymentDate"
+                  },
+                  {
+                    "inputName" : "PercentageRateForMultipleAccountAssignment"
+                  },
+                  {
+                    "inputName" : "Portfolio"
+                  },
+                  {
+                    "inputName" : "PositionValueDate"
+                  },
+                  {
+                    "inputName" : "ProductType"
+                  },
+                  {
+                    "inputName" : "SecuritiesAccout"
+                  },
+                  {
+                    "inputName" : "SecurityIDNumber"
+                  },
+                  {
+                    "inputName" : "SecurityPriceForUnitQuotation"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "YES"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "No Header"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          },
+          {
+            "name" : "Output file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Simba_ToProcessIics\\outgoing\\"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
+          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
+            "label" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
+            "path" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : "\t",
+              "firstDataRow" : 1,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 2147483647,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "none"
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "true",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-06-01T11:02:54.885Z",
+        "name" : "exp_FormatOIInvestmentsRecord",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "true",
+                "include" : "true",
+                "bulkRenameOption" : {
+                  "literal" : "OI_",
+                  "suffix" : "false"
+                }
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "'1855'",
+            "name" : "CompanyCode",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'1855'"
+          },
+          {
+            "defaultValue" : "'ILT'",
+            "name" : "ProductType",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 3,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'INE'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FinancialTransactionType",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 3,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(OI_o_A_COST_BSE>0,'BUY','SEL')"
+          },
+          {
+            "defaultValue" : "'NT'",
+            "name" : "BusinessPartnerNumber",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'NT'"
+          },
+          {
+            "defaultValue" : "'LT'",
+            "name" : "SecurityIDNumber",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 13,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Concat('OI', OI_Account_Number)"
+          },
+          {
+            "defaultValue" : "'LT'",
+            "name" : "SecuritiesAccout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 16,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Concat('OI', OI_Account_Number)"
+          },
+          {
+            "description" : "Need to advance to 1st of next month yet!",
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "CalculationDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(\nIs_Date(OI_From_date, 'YYYY-MM-DD'),\n To_Char(\n  Add_To_Date(\n   Set_Date_Part(\n    To_Date(OI_From_date, 'YYYY-MM-DD'),\n   'DD', 1),\n  'MM', 1)\n, 'MM/DD/YYYY')\n, Null)"
+          },
+          {
+            "description" : "Need to advance to 1st of next month yet!",
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "PaymentDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(\nIs_Date(OI_From_date, 'YYYY-MM-DD'),\n To_Char(\n  Add_To_Date(\n   Set_Date_Part(\n    To_Date(OI_From_date, 'YYYY-MM-DD'),\n   'DD', 1),\n  'MM', 1)\n, 'MM/DD/YYYY')\n, Null)"
+          },
+          {
+            "description" : "Need to advance to 1st of next month yet!",
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "PositionValueDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(\nIs_Date(OI_From_date, 'YYYY-MM-DD'),\n To_Char(\n  Add_To_Date(\n   Set_Date_Part(\n    To_Date(OI_From_date, 'YYYY-MM-DD'),\n   'DD', 1),\n  'MM', 1)\n, 'MM/DD/YYYY')\n, Null)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "NominalAmount",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 13,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Abs(OI_o_A_COST_BSE)"
+          },
+          {
+            "defaultValue" : "1",
+            "name" : "SecurityPriceForUnitQuotation",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "1"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "Amount",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 18,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Char(Abs(OI_o_A_COST_BSE))"
+          },
+          {
+            "defaultValue" : "'1'",
+            "name" : "AccruedInterestDailyMethod",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'1'"
+          },
+          {
+            "defaultValue" : "'I-LTIP'",
+            "name" : "Portfolio",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'I-OI'"
+          },
+          {
+            "defaultValue" : "'LTIP_TRANSACTIONAL_REPORT_TRCM_716.TXT'",
+            "name" : "InternalReference",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 55,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "SUBSTR(OI_CurrentlyProcessedFileName, INSTR(OI_CurrentlyProcessedFileName, '\\', -1)+1)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "Characteristic",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "DECODE(TRUE,\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'miscellaneous cash receipts', '+ CASH RECEIPTS',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'miscellaneous cash disbursements', '- CASH DISBURSEMENTS',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'accrued expense change', '- CHANGE IN ACCRUED INCOM',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'interportfolio transfers in', '+ PORTFOLIO TRANSFER IN',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'interportfolio transfers in', '+ PORTFOLIO TRANSFER IN',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'interportfolio transfers out', '- PORTFOLIO TRANSFER OUT',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'security receipts', '+ SECURITY RECEIPTS',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'security deliveries', '- SECURITY DELIVERIES',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'accrued income change' AND  OI_o_A_COST_BSE > 0, '+ CHANGE IN ACCRUED INCOM',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'accrued income change' AND  OI_o_A_COST_BSE < 0,'- CHANGE IN ACCRUED INCOM',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'realized gain/loss' AND  OI_o_A_COST_BSE > 0, '+ REALIZED GAIN',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'realized gain/loss' AND  OI_o_A_COST_BSE < 0, '- REALIZED GAIN',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'dividend income' AND OI_o_A_COST_BSE > 0, '+ DIVIDEND INCOME',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'dividend income' AND OI_o_A_COST_BSE < 0, '- DIVIDEND INCOME',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'income received' AND OI_o_A_COST_BSE > 0, '+ INCOME RECEIVED',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'income received' AND OI_o_A_COST_BSE < 0, '- INCOME RECEIVED',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'interest income' AND OI_o_A_COST_BSE > 0, '+ INTEREST INCOME',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'interest income' AND OI_o_A_COST_BSE < 0, '- INTEREST INCOME',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'other income' AND OI_o_A_COST_BSE > 0, '+ OTHER INCOME',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'other income' AND OI_o_A_COST_BSE < 0, '- OTHER INCOME',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'expenses paid' AND OI_o_A_COST_BSE > 0, '+ EXPENSES/ FEE',\n  Lower(Ltrim(Rtrim(OI_T_CATG_DESC))) = 'expenses paid' AND OI_o_A_COST_BSE < 0, '- EXPENSES/ FEE'\n ,NULL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "Fund",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "OI_Account_Number"
+          },
+          {
+            "defaultValue" : "'NOTRELEVANT'",
+            "name" : "Grant",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 11,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'NOTRELEVANT'"
+          },
+          {
+            "defaultValue" : "100",
+            "name" : "PercentageRateForMultipleAccountAssignment",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "100"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2023-10-05T17:17:27.595Z",
+        "name" : "rtr_OIRecords",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "INPUT",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "A_COST_BSE"
+                  },
+                  {
+                    "inputName" : "A_MV_BSE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "DEFAULT1",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "LTIPInvestments",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "LTIPPricing",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "LTIPPricingFactor",
+            "output" : "true"
+          }
+        ],
+        "groupFilterConditions" : [
+          {
+            "advancedFilterCondition" : "o_A_COST_BSE != 0 AND\nLower(LTrim(RTrim(T_CATG_DESC))) != 'opening balance' AND\nLower(LTrim(RTrim(T_CATG_DESC))) != 'closing balance' AND\nLower(LTrim(RTrim(T_CATG_DESC))) != 'total receipts' AND\nLower(LTrim(RTrim(T_CATG_DESC))) != 'total disbursements' AND\nLower(LTrim(RTrim(T_CATG_DESC))) != 'unrealized gain/loss on security movements' AND\nLower(LTrim(RTrim(T_CATG_DESC))) != 'unrealized gain/loss change'",
+            "name" : "LTIPInvestments"
+          },
+          {
+            "advancedFilterCondition" : "Lower(LTrim(RTrim(T_CATG_DESC))) = 'closing balance' AND\no_A_COST_BSE != 0 AND\no_MV_BSE != 0 AND\no_MV_BSE/o_A_COST_BSE != 0",
+            "name" : "LTIPPricing"
+          },
+          {
+            "advancedFilterCondition" : "Lower(LTrim(RTrim(T_CATG_DESC))) = 'closing balance' AND\no_A_COST_BSE != 0 AND\no_MV_BSE != 0 AND\no_MV_BSE/o_A_COST_BSE != 0",
+            "name" : "LTIPPricingFactor"
+          }
+        ]
+      },
+      {
+        "createTime" : "2023-05-22T16:35:23.759Z",
+        "name" : "tgt_OIInvestmentPricing",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "Currency"
+                  },
+                  {
+                    "inputName" : "DataClass"
+                  },
+                  {
+                    "inputName" : "Date"
+                  },
+                  {
+                    "inputName" : "Key1"
+                  },
+                  {
+                    "inputName" : "Key2"
+                  },
+                  {
+                    "inputName" : "MarketDataType"
+                  },
+                  {
+                    "inputName" : "MarketDatatype"
+                  },
+                  {
+                    "inputName" : "Time"
+                  },
+                  {
+                    "inputName" : "Value"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "YES"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "No Header"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          },
+          {
+            "name" : "Output file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Simba_ToProcessIics\\outgoing\\"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
+          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "excludeDynamicFileNameField" : "false",
+          "fwConfigId" : "@3yGp30HivBAj0Q1rYuXEyA",
+          "fwConfigName" : "fwff_NTInvestmentPricing",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
+            "label" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
+            "path" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
+            "retainMetadata" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "true",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-06-01T11:02:54.885Z",
+        "name" : "exp_FormatOIInvestmentsPricingRecord",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "true",
+                "include" : "true",
+                "bulkRenameOption" : {
+                  "literal" : "OIPricing_",
+                  "suffix" : "false"
+                }
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "'02'",
+            "name" : "DataClass",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'02'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "Key1",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Concat('OI',OIPricing_Account_Number)"
+          },
+          {
+            "defaultValue" : "'OTC                 '",
+            "name" : "Key2",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'OTC'"
+          },
+          {
+            "defaultValue" : "'01             '",
+            "name" : "MarketDataType",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 15,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'05'"
+          },
+          {
+            "defaultValue" : "'DDMMYYYY'",
+            "name" : "Date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 8,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(\nIs_Date(OIPricing_From_date, 'YYYY-MM-DD'),\n To_Char(\n  Add_To_Date(\n   Set_Date_Part(\n    To_Date(OIPricing_From_date, 'YYYY-MM-DD'),\n   'DD', 1),\n  'MM', 1)\n , 'DDMMYYYY')\n, Null)"
+          },
+          {
+            "defaultValue" : "'HHMMSS'",
+            "name" : "Time",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 6,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "' '"
+          },
+          {
+            "defaultValue" : "'A-MV-BSE / A-COST-BSE'",
+            "name" : "Value",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Char(\n  Round(   \n    Abs((OIPricing_o_MV_BSE/\n   OIPricing_o_A_COST_BSE))\n  , 6)\n)"
+          },
+          {
+            "defaultValue" : "'USD                 '",
+            "name" : "Currency",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'USD'"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2023-06-01T11:02:54.885Z",
+        "name" : "exp_FormatOIInvestmentsPricingFactorRecord",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "true",
+                "include" : "true",
+                "bulkRenameOption" : {
+                  "literal" : "OIFactor_",
+                  "suffix" : "false"
+                }
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "'02'",
+            "name" : "DataClass",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'02'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "Key1",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Concat('OI',OIFactor_Account_Number)"
+          },
+          {
+            "defaultValue" : "'OTC                 '",
+            "name" : "Key2",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'OTC'"
+          },
+          {
+            "defaultValue" : "'01             '",
+            "name" : "MarketDataType",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 15,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'01'"
+          },
+          {
+            "defaultValue" : "'DDMMYYYY'",
+            "name" : "Date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 8,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(\nIs_Date(OIFactor_From_date, 'YYYY-MM-DD'),\n To_Char(\n  Add_To_Date(\n   Set_Date_Part(\n    To_Date(OIFactor_From_date, 'YYYY-MM-DD'),\n   'DD', 1),\n  'MM', 1)\n , 'DDMMYYYY')\n, Null)"
+          },
+          {
+            "defaultValue" : "'HHMMSS'",
+            "name" : "Time",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 6,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "' '"
+          },
+          {
+            "defaultValue" : "'A-MV-BSE / A-COST-BSE'",
+            "name" : "Value",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "RTrim(RTrim(To_Char( \n Round(1000000*   \n   Abs((OIFactor_o_MV_BSE/\n   OIFactor_o_A_COST_BSE))\n  , 6)\n )\n, '0'), '.')"
+          },
+          {
+            "defaultValue" : "'USD                 '",
+            "name" : "Currency",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'USD'"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2023-05-22T16:35:23.759Z",
+        "name" : "tgt_OIInvestmentFactorPricing",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "Currency"
+                  },
+                  {
+                    "inputName" : "DataClass"
+                  },
+                  {
+                    "inputName" : "Date"
+                  },
+                  {
+                    "inputName" : "Key1"
+                  },
+                  {
+                    "inputName" : "Key2"
+                  },
+                  {
+                    "inputName" : "MarketDataType"
+                  },
+                  {
+                    "inputName" : "MarketDatatype"
+                  },
+                  {
+                    "inputName" : "Time"
+                  },
+                  {
+                    "inputName" : "Value"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "YES"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "No Header"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          },
+          {
+            "name" : "Output file directory",
+            "value" : "\\\\s8-wlactm-agp01.ad.psu.edu\\F$\\b2bhome\\Simba_ToProcessIics\\outgoing\\"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
+          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "excludeDynamicFileNameField" : "false",
+          "fwConfigId" : "@3yGp30HivBAj0Q1rYuXEyA",
+          "fwConfigName" : "fwff_NTInvestmentPricing",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
+            "label" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
+            "path" : "OI_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
+            "retainMetadata" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "true",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-10-25T16:11:06.786Z",
+        "name" : "exp_OIDecimalConversions",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "o_A_COST_BSE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Decimal(A_COST_BSE, 2)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "o_MV_BSE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Decimal(A_MV_BSE, 2)"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-11-20 14:34:41 EST"
+}

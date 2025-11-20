@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-07-05T16:04:59.669Z",
+  "updateTime" : "2025-11-20T19:34:44.012Z",
   "objectRefs" : [ {
     "id" : "5B1v5EieE6YbMteePYOK0x",
     "name" : "mpt_SimbaNorthernTrustInvestmentsLtip",
@@ -44,5 +44,7 @@
       }
     },
     "path" : "/Explore/Dev_lrh13/SIMBA_NT"
-  } ]
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
 }
