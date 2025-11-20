@@ -18,8 +18,8 @@
         "visible" : "false",
         "originalPath" : "src_NorthernTrustInvestmentsLTIP"
       },
-      "sourceConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "sourceConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "newFlatFile" : false,
       "newObject" : false,
       "showBusinessNames" : false,
@@ -82,8 +82,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_LTIPInvestmentFactorPricing"
       },
-      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "targetObject" : "$tgt_LTIPInvestmentFactorPricing",
       "targetObjectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
       "newFlatFile" : false,
@@ -139,8 +139,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_LTIPInvestmentPricing"
       },
-      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "targetObject" : "$tgt_LTIPInvestmentPricing",
       "targetObjectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
       "newFlatFile" : false,
@@ -196,8 +196,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_LTIPInvestments"
       },
-      "targetConnectionId" : "@7nbFj9UOIIFgr4uaPyqCGK",
-      "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
+      "connectionName" : "IWADEV_FfMfte",
       "targetObject" : "$tgt_LTIPInvestments",
       "targetObjectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
       "newFlatFile" : false,
@@ -279,5 +279,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-11-20 14:34:41 EST"
+  "vcsExportTime" : "2025-11-20 14:58:44 EST"
 }
