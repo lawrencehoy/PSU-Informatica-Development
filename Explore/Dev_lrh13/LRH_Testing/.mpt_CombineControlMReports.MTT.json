@@ -1,0 +1,93 @@
+{
+  "objectInfo" : {
+    "id" : "7JzwN4fUHgTh2JMscHRS4U",
+    "name" : "mpt_CombineControlMReports",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510Z0000000002YX"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Execute mapping to combine Control-M Job Definitions & MFT File Transfers reports.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-11-20T19:36:55.521Z",
+  "objectRefs" : [ {
+    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
+    "name" : "IWADEV_FfMfte",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510B000000000039"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection used as a Source and Target location for personal development.",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "8u0Nubkp2mmdiUXpslOJgG",
+    "name" : "S8-IWA-DevSA1",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C95125000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "4ulloQrYmx2fn8z3eXs5O4",
+    "name" : "mp_CombineControlMReports",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C951170000000001LX"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping to combine Control-M Job Definitions report and Control-M MFT File Transfers report; joining on the Job Name fields.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/LRH_Testing"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

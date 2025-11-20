@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "gWxk03GIDWgcVbN3Fl1Yqz",
-    "name" : "m_IwaCtmProdReporting",
+    "id" : "dmgveAQbKq7l9rl2zq5Agm",
+    "name" : "mp_ExtractControlMReportData",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,21 +9,21 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C951170000000002G1"
+        "repoHandle" : "01C9511700000000031K"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Copy Control-M Production Reports from IWA_Development folder to Larry_Folder.",
+        "description" : "Mapping to extract Control-M Reports combined data, based on Control-M job owner.",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T19:36:55.525Z",
+  "updateTime" : "2025-11-20T19:36:55.522Z",
   "objectRefs" : [ {
     "id" : "8UEBE1uX1ElfgCsIvgNMW5",
     "name" : "IWADEV_FfMfte",

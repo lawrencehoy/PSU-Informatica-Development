@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "gWxk03GIDWgcVbN3Fl1Yqz",
-    "name" : "m_IwaCtmProdReporting",
+    "id" : "0cCG1mk7Zb4boPWDDL4KIq",
+    "name" : "mp_AzureFileShare",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,24 +9,24 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C951170000000002G1"
+        "repoHandle" : "01C95117000000000184"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Copy Control-M Production Reports from IWA_Development folder to Larry_Folder.",
+        "description" : "",
         "contentType" : "JSON",
-        "documentState" : "VALID"
+        "documentState" : "INVALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T19:36:55.525Z",
+  "updateTime" : "2025-11-20T19:36:55.515Z",
   "objectRefs" : [ {
-    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
-    "name" : "IWADEV_FfMfte",
+    "id" : "gM2EIMI1E0LdpQ9kt1GPmS",
+    "name" : "ECRM_FfAdlsLearnerFileShareWc",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,11 +34,11 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C9510B000000000039"
+        "repoHandle" : "01C9510B00000000004E"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "Connection used as a Source and Target location for personal development.",
+        "description" : "RITM0334167",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }

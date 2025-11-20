@@ -1,0 +1,174 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>9QtzbdtqSLlBWlD-gt-364000-2024-07-24T18:35:19.983Z::pd.xml</types1:EntryId>
+      <types1:Name>XMLDataExtractionProcess-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>lrh13@psu.edu.SAML2</types1:CreatedBy>
+      <types1:CreationDate>2024-07-24T18:35:20Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="XMLDataExtractionProcess"
+                  name="XMLDataExtractionProcess-1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="ProcessOutput" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="count" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="XMLFromeServiceConn" type="objectlist">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="SingleRecord" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kfc0ojgg" targetId="kfc0ojgf"/>
+               </start>
+               <assignment id="kfc0ojgf">
+                  <title>XML Data</title>
+                  <operation source="formula" to="temp.XMLFromeServiceConn">
+                     <expression language="XQuery">let $x:=&lt;root&gt;
+   &lt;totalSize&gt;2&lt;/totalSize&gt;
+   &lt;records&gt;
+      &lt;LogFile&gt;/services/data/LogFile&lt;/LogFile&gt;
+      &lt;LastModifiedBy&gt;
+         &lt;attributes&gt;
+            &lt;type&gt;User&lt;/type&gt;
+            &lt;url&gt;/services/data/56433doAAA&lt;/url&gt;
+         &lt;/attributes&gt;
+         &lt;Name&gt;Automated Process&lt;/Name&gt;
+      &lt;/LastModifiedBy&gt;
+      &lt;EventType&gt;FlowExecution&lt;/EventType&gt;
+      &lt;LogFileLength&gt;3111&lt;/LogFileLength&gt;
+      &lt;CreatedDate&gt;2023-03-27T04:52:20.000+0000&lt;/CreatedDate&gt;
+      &lt;attributes&gt;
+         &lt;type&gt;EventLogFile&lt;/type&gt;
+         &lt;url&gt;/services/data/0ATR0KZ0fOAH&lt;/url&gt;
+      &lt;/attributes&gt;
+      &lt;Sequence&gt;1&lt;/Sequence&gt;
+      &lt;Id&gt;0GKZ0fOAH&lt;/Id&gt;
+      &lt;LogDate&gt;2023-03-27T03:00:00.000+0000&lt;/LogDate&gt;
+      &lt;Interval&gt;Hourly&lt;/Interval&gt;
+   &lt;/records&gt;
+   &lt;records&gt;
+      &lt;LogFile&gt;/services/data/0GKZywOAH/LogFile&lt;/LogFile&gt;
+      &lt;LastModifiedBy&gt;
+         &lt;attributes&gt;
+            &lt;type&gt;User&lt;/type&gt;
+            &lt;url&gt;/services/data/0000stdoAAA&lt;/url&gt;
+         &lt;/attributes&gt;
+         &lt;Name&gt;Automated Process&lt;/Name&gt;
+      &lt;/LastModifiedBy&gt;
+      &lt;EventType&gt;FlowExecution&lt;/EventType&gt;
+      &lt;LogFileLength&gt;382&lt;/LogFileLength&gt;
+      &lt;CreatedDate&gt;2023-03-27T09:46:00.000+0000&lt;/CreatedDate&gt;
+      &lt;attributes&gt;
+         &lt;type&gt;EventLogFile&lt;/type&gt;
+         &lt;url&gt;/services/data/00GKZywOAH&lt;/url&gt;
+      &lt;/attributes&gt;
+      &lt;Sequence&gt;1&lt;/Sequence&gt;
+      &lt;Id&gt;0ATR000000GKZywOAH&lt;/Id&gt;
+      &lt;LogDate&gt;2023-03-27T08:00:00.000+0000&lt;/LogDate&gt;
+      &lt;Interval&gt;Hourly&lt;/Interval&gt;
+   &lt;/records&gt;
+   &lt;done&gt;true&lt;/done&gt;
+&lt;/root&gt;
+return $x//records
+</expression>
+                  </operation>
+                  <link id="kwihj547" targetId="kwihj546"/>
+               </assignment>
+               <assignment id="kwihj546">
+                  <title>Get Individual records and count the records</title>
+                  <operation source="formula" to="temp.SingleRecord">
+                     <expression language="XQuery">list:head($temp.XMLFromeServiceConn )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.count">
+                     <expression language="XQuery">list:count($temp.XMLFromeServiceConn )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.XMLFromeServiceConn">
+                     <expression language="XQuery">list:tail($temp.XMLFromeServiceConn )</expression>
+                  </operation>
+                  <link id="kwihj548" targetId="kfc0ojgq"/>
+               </assignment>
+               <container id="kfc0ojgq" type="exclusive">
+                  <title>Count Records</title>
+                  <flow id="kfc0ojgu">
+                     <jumpTo id="kwihj56i">
+                        <link id="kwihj56j" targetId="kwihj546"/>
+                     </jumpTo>
+                  </flow>
+                  <flow id="kfc0ojgx">
+                     <assignment id="kfc0ojki">
+                        <title>All records counted</title>
+                        <operation source="constant" to="output.ProcessOutput">XML Iteration Completed</operation>
+                        <link id="kfc0ojkj" targetId="kfc0ojjb"/>
+                     </assignment>
+                     <end id="kfc0ojjb">
+                        <title>End 1</title>
+                     </end>
+                  </flow>
+                  <link id="kfc0ojgt" targetId="kfc0ojgu" type="containerLink">
+                     <condition source="formula">
+                        <function name="not-empty">
+                           <arg name="field">{$temp.XMLFromeServiceConn}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="kfc0ojgw" targetId="kfc0ojgx" type="containerLink">
+                     <condition source="formula">
+                        <function name="empty">
+                           <arg name="field">{$temp.XMLFromeServiceConn}</arg>
+                        </function>
+                     </condition>
+                  </link>
+               </container>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>d7lRyZ86WGVkyt8U6b0fqY</types1:GUID>
+      <types1:DisplayName>XMLDataExtractionProcess</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-11-20T19:36:54.062Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

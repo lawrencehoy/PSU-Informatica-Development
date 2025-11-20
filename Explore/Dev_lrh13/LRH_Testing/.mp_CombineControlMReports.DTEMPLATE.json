@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "gWxk03GIDWgcVbN3Fl1Yqz",
-    "name" : "m_IwaCtmProdReporting",
+    "id" : "4ulloQrYmx2fn8z3eXs5O4",
+    "name" : "mp_CombineControlMReports",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,21 +9,21 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C951170000000002G1"
+        "repoHandle" : "01C951170000000001LX"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Copy Control-M Production Reports from IWA_Development folder to Larry_Folder.",
+        "description" : "Mapping to combine Control-M Job Definitions report and Control-M MFT File Transfers report; joining on the Job Name fields.",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T19:36:55.525Z",
+  "updateTime" : "2025-11-20T19:36:55.523Z",
   "objectRefs" : [ {
     "id" : "8UEBE1uX1ElfgCsIvgNMW5",
     "name" : "IWADEV_FfMfte",

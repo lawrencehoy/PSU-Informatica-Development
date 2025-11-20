@@ -1,0 +1,64 @@
+{
+  "orgId" : "4V29GgyvYaLb6CtZAoxuaP",
+  "icsGuid" : "0XpQEd7bogfiIglKV2WCqF",
+  "name" : "fl_WatchForCombinedReport",
+  "id" : 27956,
+  "type" : "EVENT",
+  "description" : "Watch for combined Control-M report file.",
+  "status" : "ENABLE",
+  "agentGroup" : "01C95125000000000002",
+  "connection" : {
+    "type" : null,
+    "name" : null,
+    "connId" : null
+  },
+  "rules" : [ ],
+  "eventListenerRules" : {
+    "providerName" : "SFTP",
+    "eventName" : "sftp_upload_successful",
+    "fileListenerId" : 27956,
+    "rules" : [ {
+      "key" : "event.fileName",
+      "value" : "ControlMReportsCombinedData*.csv",
+      "operator" : "NONE",
+      "type" : "STRING_EQUALS"
+    }, {
+      "key" : "event.fileSize",
+      "value" : "0",
+      "operator" : "AND",
+      "type" : "GREATER_THAN"
+    } ]
+  },
+  "triggerDefinition" : {
+    "type" : null,
+    "timezone" : null,
+    "startDate" : null,
+    "endDate" : null,
+    "runIndefinitely" : false,
+    "startsAt" : null,
+    "endsAt" : null,
+    "frequency" : 0,
+    "frequencyUnit" : null,
+    "daysToRun" : null,
+    "monthlyMode" : null,
+    "dayOfMonth" : null,
+    "weekOfMonth" : null,
+    "dayOfWeek" : null
+  },
+  "stopWhenRulesMet" : false,
+  "fileStabilityType" : "SECONDARY_SNAPSHOT",
+  "stabilityCheckInterval" : 10,
+  "notifyExistingFiles" : false,
+  "lastModified" : 1761755535000,
+  "job" : "",
+  "schedule" : "",
+  "listenerEvents" : {
+    "arrive" : true,
+    "update" : false,
+    "delete" : false
+  },
+  "emailIds" : null,
+  "continueOnError" : false,
+  "filesInScheduleInterval" : false,
+  "identifier" : "27956"
+}

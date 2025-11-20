@@ -1,0 +1,649 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "mp_SimbaXferNorthernTrustToSimba",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "src_SimbaFfNorthernTrustLTIP716 -> tgt_SimbaSftpNorthernTrustLTIP716"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2024-02-27T15:05:26.970Z",
+        "name" : "src_SimbaFfNorthernTrustLTIP716",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "FIELD1"
+            },
+            "name" : "FIELD1",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD2"
+            },
+            "name" : "FIELD2",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD3"
+            },
+            "name" : "FIELD3",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD4"
+            },
+            "name" : "FIELD4",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD5"
+            },
+            "name" : "FIELD5",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD6"
+            },
+            "name" : "FIELD6",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD7"
+            },
+            "name" : "FIELD7",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD8"
+            },
+            "name" : "FIELD8",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD9"
+            },
+            "name" : "FIELD9",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD10"
+            },
+            "name" : "FIELD10",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD11"
+            },
+            "name" : "FIELD11",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD12"
+            },
+            "name" : "FIELD12",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD13"
+            },
+            "name" : "FIELD13",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD14"
+            },
+            "name" : "FIELD14",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD15"
+            },
+            "name" : "FIELD15",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD16"
+            },
+            "name" : "FIELD16",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD17"
+            },
+            "name" : "FIELD17",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD18"
+            },
+            "name" : "FIELD18",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIELD19"
+            },
+            "name" : "FIELD19",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@7nbFj9UOIIFgr4uaPyqCGK",
+          "connectionName" : "SIMBA_FfMfteSimbaToProcessIics",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT",
+            "label" : "LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT",
+            "objectName" : "LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT",
+            "path" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "FIELD1",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD1",
+                "nativeName" : "FIELD1",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD2",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD2",
+                "nativeName" : "FIELD2",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD3",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD3",
+                "nativeName" : "FIELD3",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD4",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD4",
+                "nativeName" : "FIELD4",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD5",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD5",
+                "nativeName" : "FIELD5",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD6",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD6",
+                "nativeName" : "FIELD6",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD7",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD7",
+                "nativeName" : "FIELD7",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD8",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD8",
+                "nativeName" : "FIELD8",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD9",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD9",
+                "nativeName" : "FIELD9",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD10",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD10",
+                "nativeName" : "FIELD10",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD11",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD11",
+                "nativeName" : "FIELD11",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD12",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD12",
+                "nativeName" : "FIELD12",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD13",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD13",
+                "nativeName" : "FIELD13",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD14",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD14",
+                "nativeName" : "FIELD14",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD15",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD15",
+                "nativeName" : "FIELD15",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD16",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD16",
+                "nativeName" : "FIELD16",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD17",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD17",
+                "nativeName" : "FIELD17",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD18",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD18",
+                "nativeName" : "FIELD18",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              },
+              {
+                "name" : "FIELD19",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIELD19",
+                "nativeName" : "FIELD19",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "outgoing/LTIP_TRANSACTIONAL_REPORT240206140723_TRCM_716.TXT"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : "\t",
+              "firstDataRow" : 1,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 2147483647,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "none"
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2024-02-27T15:05:26.970Z",
+        "name" : "tgt_SimbaSftpNorthernTrustLTIP716",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "useDynamicFileName" : "false",
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-11-20 14:36:53 EST"
+}

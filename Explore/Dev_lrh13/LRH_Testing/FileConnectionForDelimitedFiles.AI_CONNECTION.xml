@@ -1,0 +1,102 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>x6I1dq2ME9paabd-gt-705935-2025-10-24T13:46:11.386Z::conn.xml</types1:EntryId>
+      <types1:Name>FileConnectionForDelimitedFiles</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:inkl65icrtgcs06.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>lrh13@psu.edu.SAML2</types1:CreatedBy>
+      <types1:CreationDate>2025-10-24T13:46:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="FileConnectionForDelimitedFiles"
+                     label="FileConnectionForDelimitedFiles"
+                     name="FileConnectionForDelimitedFiles">
+            <description/>
+            <tags>.agent:inkl65icrtgcs06.informatica.com</tags>
+            <agent>inkl65icrtgcs06.informatica.com</agent>
+            <attributes/>
+            <consumers>
+               <consumer enabled="true"
+                         name="NewUsersParser"
+                         typeName="DelimitedContentParser">
+                  <description>This event source can be used to monitor folders for new delimited content files such as CSV and parse them.</description>
+                  <attributes>
+                     <attribute encrypted="false"
+                                name="directoryName"
+                                value="C:\ICSFolder\data\new_users_source"/>
+                     <attribute encrypted="false" name="recursive" value="false"/>
+                     <attribute encrypted="false" name="include" value=".*\.csv"/>
+                     <attribute encrypted="false" name="exclude" value=""/>
+                     <attribute encrypted="false" name="noop" value="false"/>
+                     <attribute encrypted="false" name="delete" value="false"/>
+                     <attribute encrypted="false" name="preMove" value=""/>
+                     <attribute encrypted="false" name="move" value=".done"/>
+                     <attribute encrypted="false" name="moveFailed" value=".error"/>
+                     <attribute encrypted="false" name="initialDelay" value="1"/>
+                     <attribute encrypted="false" name="delay" value="1"/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                     <attribute encrypted="false" name="otherAttributes" value=""/>
+                     <attribute encrypted="false" name="delimiter" value=","/>
+                     <attribute encrypted="false" name="textQualifier" value="&#34;"/>
+                     <attribute encrypted="false" name="ignoreFirstRecord" value="true"/>
+                     <attribute encrypted="false" name="splitRows" value="false"/>
+                     <attribute encrypted="false" name="useBuiltInProcessObject" value="false"/>
+                     <attribute encrypted="false"
+                                name="customObjectFields"
+                                value="Id, First Name, Last Name, Country, City, Phone, Email, Nickname, Password"/>
+                     <attribute encrypted="false" name="consumerproducer_enabled-7" value="true"/>
+                     <attribute encrypted="false" name="noop7" value="false"/>
+                     <attribute encrypted="false" name="ignoreFirstRecord7" value="true"/>
+                     <attribute encrypted="false" name="useBuiltInProcessObject7" value="false"/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true"
+                         name="DelimitedContentWriter"
+                         typeName="DelimitedContentWriter">
+                  <description>This event target can be used to serialize process objects to delimited content files such as CSV and save them to files on a disk.</description>
+                  <attributes>
+                     <attribute encrypted="false"
+                                name="directoryName"
+                                value="C:\ICSFolder\data\file_storage\users"/>
+                     <attribute encrypted="false" name="fileExist" value="Move"/>
+                     <attribute encrypted="false" name="moveExisting" value=".overwritten"/>
+                     <attribute encrypted="false" name="eagerDeleteTargetFile" value="true"/>
+                     <attribute encrypted="false" name="tempPrefix" value="temp_"/>
+                     <attribute encrypted="false" name="tempFileName" value=""/>
+                     <attribute encrypted="false" name="forceWrites" value="true"/>
+                     <attribute encrypted="false" name="bufferSize" value=""/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                     <attribute encrypted="false" name="delimiter" value=","/>
+                     <attribute encrypted="false" name="textQualifier" value="&#34;"/>
+                     <attribute encrypted="false" name="skipHeaders" value="false"/>
+                     <attribute encrypted="false" name="lineEnding" value="Windows"/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="File"
+                           uuid="ac000300-d9fe-11e4-8830-0800200c9a66">
+               <description>Provides connections to file monitoring brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>ho2aVNqw503bkb71WVXcUJ</types1:GUID>
+      <types1:DisplayName>FileConnectionForDelimitedFiles</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-11-20T19:36:54.116Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

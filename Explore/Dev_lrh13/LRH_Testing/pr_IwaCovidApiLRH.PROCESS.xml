@@ -1,0 +1,150 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Izu2JQhtGci3zym-gt-1492559-2025-03-28T17:47:43.551Z::pd.xml</types1:EntryId>
+      <types1:Name>pr_IwaCovidApiLRH</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>lrh13@psu.edu.SAML2</types1:CreatedBy>
+      <types1:CreationDate>2025-03-28T17:47:44Z</types1:CreationDate>
+      <types1:ModifiedBy>lrh13_local</types1:ModifiedBy>
+      <types1:ModificationDate>2025-11-11T17:31:52Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="eMYZAsZFakRj7NLFUDJryT"
+                  displayName="pr_IwaCovidApiLRH"
+                  name="pr_IwaCovidApiLRH"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="in_date" required="false" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_iso" required="false" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description=""
+                          name="in_serverurl"
+                          required="false"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="out_date" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="out_deaths" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="out_payload" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+            </extData>
+            <flow id="aefde519f-a21d-4b4e-a699-a72edcdd97d2">
+               <start id="yd2bc5e7c-6742-4cda-bfeb-d69fdd7cc187">
+                  <link id="yc7742b28-41eb-4564-8878-7438c05fd96d"
+                        targetId="a1eMYZAsZFakRj7NLFUDJryT-Servicebdd0b8e1-51c0-48b6-9ed8-3f2dbe7f689f"/>
+               </start>
+               <eventContainer id="a1eMYZAsZFakRj7NLFUDJryT-Servicebdd0b8e1-51c0-48b6-9ed8-3f2dbe7f689f">
+                  <service id="ze5e4ef8e-c4f3-4674-a321-09a0fbb8e61a">
+                     <title>sc_GetCovidIdLRH</title>
+                     <serviceName>ac-IwaCovidApiLRH:Get_CovidData</serviceName>
+                     <serviceGUID>1biHxcMSjuikfopvueAv0h</serviceGUID>
+                     <serviceInput/>
+                  </service>
+                  <flow id="wf3c5a692-9907-4ec4-a314-c802deed7a3d">
+                     <assignment id="a1eMYZAsZFakRj7NLFUDJryT-Assignmentdc36f31c-90ea-47c1-be69-5bd9094ccd08">
+                        <title>asn_CovidPayloadLRH</title>
+                        <operation source="field" to="output.out_date">output.out_date</operation>
+                        <operation source="field" to="output.out_deaths">output.deaths</operation>
+                        <operation source="field" to="output.out_payload">output.entire_response</operation>
+                     </assignment>
+                     <link id="da11a2a43-0e42-47d3-b6c4-4b3a8db24823"
+                           targetId="a1eMYZAsZFakRj7NLFUDJryT-Servicebdd0b8e1-51c0-48b6-9ed8-3f2dbe7f689f"
+                           type="containerLink"/>
+                  </flow>
+                  <flow id="w5f262167-f1ec-4ce3-bb86-0047ca344068">
+                     <end id="a1eMYZAsZFakRj7NLFUDJryT-Endfb08a169-ec83-4fc1-9d31-20ddf6144116">
+                        <title>End 2</title>
+                     </end>
+                  </flow>
+                  <link id="mec7d7a07-12ef-484e-a485-a6c829d61395"
+                        targetId="wf3c5a692-9907-4ec4-a314-c802deed7a3d"
+                        type="containerLink"/>
+                  <link id="n28e0954e-804e-4de0-8831-649938b7f55e"
+                        targetId="a1eMYZAsZFakRj7NLFUDJryT-end-d503a6fd7-c171-4acb-a04b-43f543f8fecd"/>
+                  <events>
+                     <catch faultField="faultInfo"
+                            id="ya3c2188f-031e-4156-97a7-dfc0429aacb5"
+                            interrupting="true">
+                        <link id="x55817b83-67f3-4eaa-ba4c-6c5201dc78e3"
+                              targetId="w5f262167-f1ec-4ce3-bb86-0047ca344068"
+                              type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="a1eMYZAsZFakRj7NLFUDJryT-end-d503a6fd7-c171-4acb-a04b-43f543f8fecd">
+                  <title>End 1</title>
+               </end>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>8cbdf19c-77d7-4cd5-8e6a-cdb24f6353f1</ns1:Id>
+               <ns1:Name>April 2, 2022</ns1:Name>
+               <ns1:CreatedBy>lrh13@psu.edu.SAML2</ns1:CreatedBy>
+               <ns1:CreationDate>2025-03-28T18:00:01Z</ns1:CreationDate>
+               <ns1:ModifiedBy>lrh13@psu.edu.SAML2</ns1:ModifiedBy>
+               <ns1:ModificationDate>2025-03-28T18:00:01Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+    "in_date": "2022-04-02",
+    "in_iso": "USA",
+    "in_serverurl": "https://covid-api.com"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>eMYZAsZFakRj7NLFUDJryT</types1:GUID>
+      <types1:DisplayName>pr_IwaCovidApiLRH</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-11-20T19:36:54.088Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

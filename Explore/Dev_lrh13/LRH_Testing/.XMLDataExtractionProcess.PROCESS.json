@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "d7lRyZ86WGVkyt8U6b0fqY",
+    "name" : "XMLDataExtractionProcess",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "9QtzbdtqSLlBWlD-gt-364000-2024-07-24T18:35:19.983Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-11-20T19:36:55.520Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

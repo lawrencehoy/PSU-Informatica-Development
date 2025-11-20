@@ -5,6 +5,7 @@
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
     "name" : "m_IwaCtmProdReporting",
+    "specialCharacterSupport" : "false",
     "links" : [
       {
         "link" : "src_IwaProdJobDefinitions -> tgt_IwaProdJobDefinitionsLarry"
@@ -344,6 +345,7 @@
               "delimiter" : ",",
               "firstDataRow" : 2,
               "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
               "headerLineNo" : 1,
               "multiDelimitersAsAnd" : "true",
               "rowDelimiter" : 0,
@@ -428,6 +430,7 @@
         "fieldMappingMode" : "BY_NAME",
         "inputSorted" : "false",
         "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
         "updateColumns" : null,
         "useLabels" : "false",
         "useSequenceFields" : "false",
@@ -459,6 +462,7 @@
               "delimiter" : "\t",
               "firstDataRow" : 2,
               "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
               "headerLineNo" : 1,
               "multiDelimitersAsAnd" : "true",
               "rowDelimiter" : 0,
@@ -703,6 +707,7 @@
               "delimiter" : ",",
               "firstDataRow" : 2,
               "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
               "headerLineNo" : 1,
               "multiDelimitersAsAnd" : "true",
               "rowDelimiter" : 0,
@@ -787,6 +792,7 @@
         "fieldMappingMode" : "BY_NAME",
         "inputSorted" : "false",
         "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
         "updateColumns" : null,
         "useLabels" : "false",
         "useSequenceFields" : "false",
@@ -818,6 +824,7 @@
               "delimiter" : "\t",
               "firstDataRow" : 2,
               "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
               "headerLineNo" : 1,
               "multiDelimitersAsAnd" : "true",
               "rowDelimiter" : 0,
@@ -842,5 +849,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-04-10 09:30:58 EDT"
+  "vcsExportTime" : "2025-11-20 14:36:54 EST"
 }

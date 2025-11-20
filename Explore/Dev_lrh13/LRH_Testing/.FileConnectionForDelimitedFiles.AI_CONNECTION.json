@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "ho2aVNqw503bkb71WVXcUJ",
+    "name" : "FileConnectionForDelimitedFiles",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "x6I1dq2ME9paabd-gt-705935-2025-10-24T13:46:11.386Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-11-20T19:36:55.524Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

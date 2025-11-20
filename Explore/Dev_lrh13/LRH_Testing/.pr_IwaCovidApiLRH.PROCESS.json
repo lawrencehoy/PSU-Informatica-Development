@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "eMYZAsZFakRj7NLFUDJryT",
+    "name" : "pr_IwaCovidApiLRH",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Izu2JQhtGci3zym-gt-1492559-2025-03-28T17:47:43.551Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-11-20T19:36:55.526Z",
+  "objectRefs" : [ {
+    "id" : "1biHxcMSjuikfopvueAv0h",
+    "name" : "ac-IwaCovidApiLRH",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Fjuz3PI2HBxZmtK-gt-1223465-2025-03-26T17:40:57.511Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Dev_lrh13/Control-M for Informatica CS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

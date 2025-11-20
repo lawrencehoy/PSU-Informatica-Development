@@ -1,0 +1,153 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>tQ16WdyH72yIYmW-gt-701988-2025-10-24T13:27:12.311Z::pd.xml</types1:EntryId>
+      <types1:Name>MyUsersProcessor</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:inkl65icrtgcs06.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>lrh13@psu.edu.SAML2</types1:CreatedBy>
+      <types1:CreationDate>2025-10-24T13:27:12Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="85IgcIuFpcqfvNx9rpkQk3"
+                  displayName="MyUsersProcessor"
+                  name="MyUsersProcessor">
+            <appliesTo/>
+            <description/>
+            <tags>.agent:inkl65icrtgcs06.informatica.com</tags>
+            <generator>Informatica Process Designer 10</generator>
+            <input>
+               <parameter description="" name="delimitedContent" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">FileConnectionForDelimitedFiles:NewUsersParserContent</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="targetFolder" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="usUsers" type="objectlist">
+                  <options>
+                     <option name="referenceTo">FileConnectionForDelimitedFiles:NewUsersParserRecord</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1A8127n8RGXiW9UQBdz3qj</option>
+                  </options>
+               </field>
+               <field description="" name="abroadUsers" type="objectlist">
+                  <options>
+                     <option name="referenceTo">FileConnectionForDelimitedFiles:NewUsersParserRecord</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1A8127n8RGXiW9UQBdz3qj</option>
+                  </options>
+               </field>
+               <field description="" name="serializeTask" type="reference">
+                  <options>
+                     <option name="referenceTo">FileConnectionForDelimitedFiles:SerializeToDelimitedContentTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1A8127n8RGXiW9UQBdz3qj</option>
+                  </options>
+               </field>
+               <field description="" name="records" type="objectlist">
+                  <options>
+                     <option name="referenceTo">FileConnectionForDelimitedFiles:NewUsersParserRecord</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1A8127n8RGXiW9UQBdz3qj</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>inkl65icrtgcs06.informatica.com</targetLocation>
+               <event eventSource="FileConnectionForDelimitedFiles:NewUsersParser"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="link1" targetId="c"/>
+               </start>
+               <assignment id="c">
+                  <title>Get target folder name</title>
+                  <operation source="constant" to="temp.targetFolder">users_123</operation>
+                  <operation source="field" to="temp.records">input.delimitedContent[1]/record</operation>
+                  <link id="ibc1mqnb" targetId="ibc1mqna"/>
+               </assignment>
+               <assignment id="ibc1mqna">
+                  <title>Sort users</title>
+                  <operation source="formula" to="temp.usUsers">
+                     <expression language="XQuery">for $user in list:sequence( $temp.records ) let $country := string($user//Country/text() ) where $country = "USA" return $user</expression>
+                  </operation>
+                  <operation source="formula" to="temp.abroadUsers">
+                     <expression language="XQuery">for $user in list:sequence( $temp.records ) let $country := string( $user//Country/text() ) where not( $country = "USA" ) return $user</expression>
+                  </operation>
+                  <link id="ibc1mr1n" targetId="ibc1mr0v"/>
+               </assignment>
+               <assignment id="ibc1mr0v">
+                  <title>Assignment to Relative path, File name etc.</title>
+                  <operation source="field" to="temp.serializeTask[1]/filePath">temp.targetFolder</operation>
+                  <operation source="constant" to="temp.serializeTask[1]/fileName">users_usa.csv</operation>
+                  <operation source="formula" to="temp.serializeTask[1]/customObjects">
+                     <expression language="XQuery">$temp.usUsers </expression>
+                  </operation>
+                  <operation source="formula" to="temp.serializeTask[1]/header">
+                     <expression language="XQuery">&lt;header&gt; &lt;name&gt;Id&lt;/name&gt; &lt;fieldIndex&gt;1&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;First_Name&lt;/name&gt; &lt;fieldIndex&gt;2&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;Last_Name&lt;/name&gt; &lt;fieldIndex&gt;3&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;Nickname&lt;/name&gt; &lt;fieldIndex&gt;4&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;Phone&lt;/name&gt; &lt;fieldIndex&gt;5&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;City&lt;/name&gt; &lt;fieldIndex&gt;6&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;Email&lt;/name&gt; &lt;fieldIndex&gt;7&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;Password&lt;/name&gt; &lt;fieldIndex&gt;8&lt;/fieldIndex&gt; &lt;/header&gt;</expression>
+                  </operation>
+                  <link id="ibc1mr13" targetId="ibc1mr12"/>
+               </assignment>
+               <assignment id="ibc1mr16">
+                  <title>Assignment to Relative path, File name etc.</title>
+                  <operation source="field" to="temp.serializeTask[1]/filePath">temp.targetFolder</operation>
+                  <operation source="constant" to="temp.serializeTask[1]/fileName">users_abroad.csv</operation>
+                  <operation source="formula" to="temp.serializeTask[1]/customObjects">
+                     <expression language="XQuery">$temp.abroadUsers </expression>
+                  </operation>
+                  <operation source="formula" to="temp.serializeTask[1]/header">
+                     <expression language="XQuery">&lt;header&gt; &lt;name&gt;Id&lt;/name&gt; &lt;fieldIndex&gt;1&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;First_Name&lt;/name&gt; &lt;fieldIndex&gt;2&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;Last_Name&lt;/name&gt; &lt;fieldIndex&gt;3&lt;/fieldIndex&gt; &lt;/header&gt;,  &lt;header&gt; &lt;name&gt;Nickname&lt;/name&gt; &lt;fieldIndex&gt;4&lt;/fieldIndex&gt; &lt;/header&gt;,  &lt;header&gt; &lt;name&gt;Phone&lt;/name&gt; &lt;fieldIndex&gt;5&lt;/fieldIndex&gt; &lt;/header&gt;,  &lt;header&gt; &lt;name&gt;Country&lt;/name&gt; &lt;fieldIndex&gt;6&lt;/fieldIndex&gt; &lt;/header&gt;, &lt;header&gt; &lt;name&gt;City&lt;/name&gt; &lt;fieldIndex&gt;7&lt;/fieldIndex&gt; &lt;/header&gt;,  &lt;header&gt; &lt;name&gt;Email&lt;/name&gt; &lt;fieldIndex&gt;8&lt;/fieldIndex&gt; &lt;/header&gt;,  &lt;header&gt; &lt;name&gt;Password&lt;/name&gt; &lt;fieldIndex&gt;9&lt;/fieldIndex&gt; &lt;/header&gt;</expression>
+                  </operation>
+                  <link id="ibc1mr1e" targetId="ibc1mr1d"/>
+               </assignment>
+               <service id="ibc1mr12">
+                  <title>DelimitedContentWriter1</title>
+                  <serviceName>FileConnectionForDelimitedFiles:DelimitedContentWriter</serviceName>
+                  <serviceGUID>1A8127n8RGXiW9UQBdz3qj</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serializationTask" source="field" updatable="true">temp.serializeTask</parameter>
+                  </serviceInput>
+                  <link id="ibc1mr17" targetId="ibc1mr16"/>
+               </service>
+               <service id="ibc1mr1d">
+                  <title>DelimitedContentWriter2</title>
+                  <serviceName>FileConnectionForDelimitedFiles:DelimitedContentWriter</serviceName>
+                  <serviceGUID>1A8127n8RGXiW9UQBdz3qj</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serializationTask" source="field" updatable="true">temp.serializeTask</parameter>
+                  </serviceInput>
+                  <link id="ighawh8z" targetId="ibc1mr1h"/>
+               </service>
+               <end id="ibc1mr1h"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>85IgcIuFpcqfvNx9rpkQk3</types1:GUID>
+      <types1:DisplayName>MyUsersProcessor</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-11-20T19:36:54.024Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
