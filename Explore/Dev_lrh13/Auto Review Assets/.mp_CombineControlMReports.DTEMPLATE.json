@@ -23,10 +23,10 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T19:41:01.568Z",
+  "updateTime" : "2025-12-18T15:46:08.956Z",
   "objectRefs" : [ {
-    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
-    "name" : "IWADEV_FfMfte",
+    "id" : "7PDq4nCoDQyisJbWyQ7iiK",
+    "name" : "IWA_DummyPlaceholder",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,11 +34,11 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C9510B000000000039"
+        "repoHandle" : "01C9510B00000000005O"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "Connection used as a Source and Target location for personal development.",
+        "description" : "Dummy connection to be used as a placeholder only.",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
