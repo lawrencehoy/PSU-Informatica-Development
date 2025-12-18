@@ -18,8 +18,8 @@
         "visible" : "false",
         "originalPath" : "src_NorthernTrustInvestmentsLTIP"
       },
-      "sourceConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
-      "connectionName" : "IWADEV_FfMfte",
+      "sourceConnectionId" : "@7PDq4nCoDQyisJbWyQ7iiK",
+      "connectionName" : "IWA_DummyPlaceholder",
       "newFlatFile" : false,
       "newObject" : false,
       "showBusinessNames" : false,
@@ -63,6 +63,7 @@
       "retainFieldMetadata" : false,
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -82,8 +83,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_LTIPInvestmentFactorPricing"
       },
-      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
-      "connectionName" : "IWADEV_FfMfte",
+      "targetConnectionId" : "@7PDq4nCoDQyisJbWyQ7iiK",
+      "connectionName" : "IWA_DummyPlaceholder",
       "targetObject" : "$tgt_LTIPInvestmentFactorPricing",
       "targetObjectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
       "newFlatFile" : false,
@@ -120,6 +121,8 @@
       "objectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_FACTOR_LRH.TXT",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "targetSchemaMode" : "DONT_APPLY_CHANGES",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -139,8 +142,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_LTIPInvestmentPricing"
       },
-      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
-      "connectionName" : "IWADEV_FfMfte",
+      "targetConnectionId" : "@7PDq4nCoDQyisJbWyQ7iiK",
+      "connectionName" : "IWA_DummyPlaceholder",
       "targetObject" : "$tgt_LTIPInvestmentPricing",
       "targetObjectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
       "newFlatFile" : false,
@@ -177,6 +180,8 @@
       "objectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_734_LRH.TXT",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "targetSchemaMode" : "DONT_APPLY_CHANGES",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -196,8 +201,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_LTIPInvestments"
       },
-      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
-      "connectionName" : "IWADEV_FfMfte",
+      "targetConnectionId" : "@7PDq4nCoDQyisJbWyQ7iiK",
+      "connectionName" : "IWA_DummyPlaceholder",
       "targetObject" : "$tgt_LTIPInvestments",
       "targetObjectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
       "newFlatFile" : false,
@@ -232,6 +237,8 @@
       "objectLabel" : "LTIP_TRANSACTIONAL_REPORT%y%m%d%H%M%S_TRCM_716_LRH.TXT",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "targetSchemaMode" : "DONT_APPLY_CHANGES",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -276,8 +283,9 @@
   "schemaMode" : "async",
   "valid" : true,
   "parameterFileEncoding" : "UTF-8",
+  "optimizationPlan" : "NONE",
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-11-20 15:19:45 EST"
+  "vcsExportTime" : "2025-12-18 15:05:43 EST"
 }
