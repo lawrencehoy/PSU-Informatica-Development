@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "gWxk03GIDWgcVbN3Fl1Yqz",
-    "name" : "m_IwaCtmProdReporting",
+    "id" : "1eerag8BpYueuBnki1BtCD",
+    "name" : "mp_IwaCtmTestReporting",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,24 +9,24 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C951170000000002G1"
+        "repoHandle" : "01C951170000000000S1"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Copy Control-M Production Reports from IWA_Development folder to Larry_Folder.",
+        "description" : "Copy Control-M Test Reports from IWA_Development folder to Larry_Folder.",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T20:22:57.242Z",
+  "updateTime" : "2025-12-18T16:16:00.238Z",
   "objectRefs" : [ {
-    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
-    "name" : "IWADEV_FfMfte",
+    "id" : "7PDq4nCoDQyisJbWyQ7iiK",
+    "name" : "IWA_DummyPlaceholder",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,11 +34,11 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C9510B000000000039"
+        "repoHandle" : "01C9510B00000000005O"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "Connection used as a Source and Target location for personal development.",
+        "description" : "Dummy connection to be used as a placeholder only.",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }

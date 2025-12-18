@@ -23,28 +23,8 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T20:22:57.237Z",
+  "updateTime" : "2025-12-18T16:16:00.240Z",
   "objectRefs" : [ {
-    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
-    "name" : "IWADEV_FfMfte",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "01C9510B000000000039"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Connection used as a Source and Target location for personal development.",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
     "id" : "8u0Nubkp2mmdiUXpslOJgG",
     "name" : "S8-IWA-DevSA1",
     "type" : "AgentGroup",
@@ -87,6 +67,26 @@
       }
     },
     "path" : "/Explore/Dev_lrh13/LRH_Testing"
+  }, {
+    "id" : "7PDq4nCoDQyisJbWyQ7iiK",
+    "name" : "IWA_DummyPlaceholder",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510B00000000005O"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Dummy connection to be used as a placeholder only.",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
   } ],
   "readableFileExtension" : "json",
   "readableFilePresent" : true

@@ -1,54 +1,24 @@
 {
   "content" : {
-    "description" : "Copy Control-M Test Reports from IWA_Development folder to Larry_Folder.",
+    "description" : "Copy Control-M Production Reports from IWA_Development folder to Larry_Folder.",
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
-    "name" : "m_IwaCtmTestReporting",
+    "name" : "mp_IwaCtmProdReporting",
     "specialCharacterSupport" : "false",
-    "flowOrderEntries" : [
-      {
-        "sourceTypes" : [
-          "Source"
-        ],
-        "sources" : [
-          "src_IwaTestJobDefinitions"
-        ],
-        "targetTypes" : [
-          "Target"
-        ],
-        "targets" : [
-          "tgt_IwaTestJobDefinitionsLarry"
-        ]
-      },
-      {
-        "sourceTypes" : [
-          "Source"
-        ],
-        "sources" : [
-          "src_IwaTestMftJobs"
-        ],
-        "targetTypes" : [
-          "Target"
-        ],
-        "targets" : [
-          "tgt_IwaTestMftJobsLarry"
-        ]
-      }
-    ],
     "links" : [
       {
-        "link" : "src_IwaTestJobDefinitions -> tgt_IwaTestJobDefinitionsLarry"
+        "link" : "src_IwaProdJobDefinitions -> tgt_IwaProdJobDefinitionsLarry"
       },
       {
-        "link" : "src_IwaTestMftJobs -> tgt_IwaTestMftJobsLarry"
+        "link" : "src_IwaProdMftJobs -> tgt_IwaProdMftJobsLarry"
       }
     ],
     "transformations" : [
       {
         "description" : "Source Job Definitions file, IWA_Development folder.",
         "createTime" : "2024-07-10T17:05:10.585Z",
-        "name" : "src_IwaTestJobDefinitions",
+        "name" : "src_IwaProdJobDefinitions",
         "advancedProperties" : [
           {
             "name" : "Tracing Level",
@@ -84,6 +54,72 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Application"
+            },
+            "name" : "Application",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Sub_Application"
+            },
+            "name" : "Sub_Application",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Job_Name"
+            },
+            "name" : "Job_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Active_From"
+            },
+            "name" : "Active_From",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Active_Till"
+            },
+            "name" : "Active_Till",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Job_Type"
+            },
+            "name" : "Job_Type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
           {
             "adapterField" : {
               "name" : "Change_date"
@@ -130,19 +166,115 @@
           }
         ],
         "dataAdapter" : {
-          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
-          "connectionName" : "IWADEV_FfMfte",
+          "connectionId" : "saas:@7PDq4nCoDQyisJbWyQ7iiK",
+          "connectionName" : "IWA_DummyPlaceholder",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
           "typeSystem" : "CSVFile",
           "useDynamicFileName" : "false",
           "object" : {
-            "name" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
-            "label" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
-            "objectName" : "Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
-            "path" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "name" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "label" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "objectName" : "Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
+            "path" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv",
             "retainMetadata" : "false",
             "fields" : [
+              {
+                "name" : "Application",
+                "fieldType" : "CONNECTOR",
+                "label" : "Application",
+                "nativeName" : "Application",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Sub_Application",
+                "fieldType" : "CONNECTOR",
+                "label" : "Sub Application",
+                "nativeName" : "Sub Application",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Job_Name",
+                "fieldType" : "CONNECTOR",
+                "label" : "Job Name",
+                "nativeName" : "Job Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Active_From",
+                "fieldType" : "CONNECTOR",
+                "label" : "Active From",
+                "nativeName" : "Active From",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Active_Till",
+                "fieldType" : "CONNECTOR",
+                "label" : "Active Till",
+                "nativeName" : "Active Till",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Job_Type",
+                "fieldType" : "CONNECTOR",
+                "label" : "Job Type",
+                "nativeName" : "Job Type",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                  }
+                ]
+              },
               {
                 "name" : "Change_date",
                 "fieldType" : "CONNECTOR",
@@ -155,7 +287,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -171,7 +303,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -187,7 +319,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -203,7 +335,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/Job Definitions (All Jobs with Fields for PowerBI) 20250406000025.csv"
                   }
                 ]
               }
@@ -232,7 +364,7 @@
       {
         "description" : "Target Job Definitions file, Larry_Folder.",
         "createTime" : "2024-07-10T17:05:10.585Z",
-        "name" : "tgt_IwaTestJobDefinitionsLarry",
+        "name" : "tgt_IwaProdJobDefinitionsLarry",
         "advancedProperties" : [
           {
             "name" : "Forward Rejected Rows",
@@ -283,7 +415,7 @@
           },
           {
             "name" : "Output filename",
-            "value" : "ReportOutput_%y%m%d%H%M%S.txt"
+            "value" : "Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv"
           },
           {
             "name" : "Reject file directory",
@@ -291,7 +423,7 @@
           },
           {
             "name" : "Reject filename",
-            "value" : "ReportRejects_%y%m%d%H%M%S.txt"
+            "value" : "ReportRejects_%y%m%d%H%M%S.csv"
           }
         ],
         "createTarget" : "true",
@@ -303,8 +435,8 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "dataAdapter" : {
-          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
-          "connectionName" : "IWADEV_FfMfte",
+          "connectionId" : "saas:@7PDq4nCoDQyisJbWyQ7iiK",
+          "connectionName" : "IWA_DummyPlaceholder",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
           "typeSystem" : "CSVFile",
@@ -321,9 +453,9 @@
             "useBulkApiV2" : "false"
           },
           "object" : {
-            "name" : "Test Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
-            "label" : "Test Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
-            "path" : "Test Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
+            "name" : "Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
+            "label" : "Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
+            "path" : "Job Definitions (All Jobs with Fields for PowerBI) %y%m%d%H%M%S.csv",
             "retainMetadata" : "false",
             "fileAttrs" : {
               "consecutiveDelimiter" : "false",
@@ -356,7 +488,7 @@
       {
         "description" : "Source MFT Job file, IWA_Development folder.",
         "createTime" : "2024-07-10T17:05:10.585Z",
-        "name" : "src_IwaTestMftJobs",
+        "name" : "src_IwaProdMftJobs",
         "advancedProperties" : [
           {
             "name" : "Tracing Level",
@@ -460,17 +592,17 @@
           }
         ],
         "dataAdapter" : {
-          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
-          "connectionName" : "IWADEV_FfMfte",
+          "connectionId" : "saas:@7PDq4nCoDQyisJbWyQ7iiK",
+          "connectionName" : "IWA_DummyPlaceholder",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
           "typeSystem" : "CSVFile",
           "useDynamicFileName" : "false",
           "object" : {
-            "name" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv",
-            "label" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv",
-            "objectName" : "Test MFT (Transfers for PowerBI) 20250406000025.csv",
-            "path" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv",
+            "name" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv",
+            "label" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv",
+            "objectName" : "MFT (Transfers for PowerBI) 20250406000025.csv",
+            "path" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv",
             "retainMetadata" : "false",
             "fields" : [
               {
@@ -485,7 +617,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -501,7 +633,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -517,7 +649,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -533,7 +665,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -549,7 +681,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv"
                   }
                 ]
               },
@@ -565,7 +697,7 @@
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "incoming/Test MFT (Transfers for PowerBI) 20250406000025.csv"
+                    "value" : "incoming/MFT (Transfers for PowerBI) 20250406000025.csv"
                   }
                 ]
               }
@@ -594,7 +726,7 @@
       {
         "description" : "Target MFT Jobs file, Larry_Folder.",
         "createTime" : "2024-07-10T17:05:10.585Z",
-        "name" : "tgt_IwaTestMftJobsLarry",
+        "name" : "tgt_IwaProdMftJobsLarry",
         "advancedProperties" : [
           {
             "name" : "Forward Rejected Rows",
@@ -645,7 +777,7 @@
           },
           {
             "name" : "Output filename",
-            "value" : "ReportOutput_%y%m%d%H%M%S.txt"
+            "value" : "MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv"
           },
           {
             "name" : "Reject file directory",
@@ -653,7 +785,7 @@
           },
           {
             "name" : "Reject filename",
-            "value" : "ReportRejects_%y%m%d%H%M%S.txt"
+            "value" : "ReportRejects_%y%m%d%H%M%S.csv"
           }
         ],
         "createTarget" : "true",
@@ -665,8 +797,8 @@
         "useLabels" : "false",
         "useSequenceFields" : "false",
         "dataAdapter" : {
-          "connectionId" : "saas:@8UEBE1uX1ElfgCsIvgNMW5",
-          "connectionName" : "IWADEV_FfMfte",
+          "connectionId" : "saas:@7PDq4nCoDQyisJbWyQ7iiK",
+          "connectionName" : "IWA_DummyPlaceholder",
           "excludeDynamicFileNameField" : "false",
           "objectType" : "SINGLE",
           "typeSystem" : "CSVFile",
@@ -683,9 +815,9 @@
             "useBulkApiV2" : "false"
           },
           "object" : {
-            "name" : "Test MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
-            "label" : "Test MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
-            "path" : "Test MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
+            "name" : "MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
+            "label" : "MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
+            "path" : "MFT (Transfers for PowerBI) %y%m%d%H%M%S.csv",
             "retainMetadata" : "false",
             "fileAttrs" : {
               "consecutiveDelimiter" : "false",
@@ -717,5 +849,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-11-20 15:22:54 EST"
+  "vcsExportTime" : "2025-12-18 11:15:58 EST"
 }

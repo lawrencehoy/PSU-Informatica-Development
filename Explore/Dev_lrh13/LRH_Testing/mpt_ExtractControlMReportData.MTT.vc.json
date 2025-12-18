@@ -18,8 +18,8 @@
         "visible" : "false",
         "originalPath" : "src_CombinedControlMReportData"
       },
-      "sourceConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
-      "connectionName" : "IWADEV_FfMfte",
+      "sourceConnectionId" : "@7PDq4nCoDQyisJbWyQ7iiK",
+      "connectionName" : "IWA_DummyPlaceholder",
       "newFlatFile" : false,
       "newObject" : false,
       "showBusinessNames" : false,
@@ -82,8 +82,8 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "tgt_ControlMSimbaJobData"
       },
-      "targetConnectionId" : "@8UEBE1uX1ElfgCsIvgNMW5",
-      "connectionName" : "IWADEV_FfMfte",
+      "targetConnectionId" : "@7PDq4nCoDQyisJbWyQ7iiK",
+      "connectionName" : "IWA_DummyPlaceholder",
       "targetObject" : "outgoing/Control-MReportData_SIMBA.csv",
       "targetObjectLabel" : "outgoing/Control-MReportData_SIMBA.csv",
       "newFlatFile" : false,
@@ -156,5 +156,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-11-20 15:22:55 EST"
+  "vcsExportTime" : "2025-12-18 11:15:59 EST"
 }
