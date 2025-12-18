@@ -23,28 +23,8 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-11-20T20:19:46.588Z",
+  "updateTime" : "2025-12-18T19:43:46.841Z",
   "objectRefs" : [ {
-    "id" : "8UEBE1uX1ElfgCsIvgNMW5",
-    "name" : "IWADEV_FfMfte",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "01C9510B000000000039"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Connection used as a Source and Target location for personal development.",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
     "id" : "3yGp30HivBAj0Q1rYuXEyA",
     "name" : "fwff_NTInvestmentPricing",
     "type" : "FWCONFIG",
@@ -56,10 +36,7 @@
       "repoInfo" : {
         "repoHandle" : "01C95129000000000002"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Fixed-width file format for SIMBA Northern Trust Investment Pricing (734) and Investment Pricing Factor (734_Factor) files.",
         "contentType" : "JSON",
@@ -67,6 +44,26 @@
       }
     },
     "path" : "/Explore/Dev_lrh13/SIMBA_NT"
+  }, {
+    "id" : "7PDq4nCoDQyisJbWyQ7iiK",
+    "name" : "IWA_DummyPlaceholder",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C9510B00000000005O"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Dummy connection to be used as a placeholder only.",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
   } ],
   "readableFileExtension" : "json",
   "readableFilePresent" : true
